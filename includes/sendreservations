@@ -1,0 +1,221 @@
+<h2 id="send-reservations">Send Reservations</h2>
+
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:htnga=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span> <span class="na">xmlns:wss=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wss:Security</span> <span class="na">mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wss:UsertextToken&gt;</span>
+        <span class="nt">&lt;wss:Username&gt;</span>test<span class="nt">&lt;/wss:Username&gt;</span>
+        <span class="nt">&lt;wss:Password&gt;</span>test<span class="nt">&lt;/wss:Password&gt;</span>
+      <span class="nt">&lt;/wss:UsertextToken&gt;</span>
+    <span class="nt">&lt;/wss:Security&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htnga:CorrelationID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/htnga:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Commit"</span> <span class="na">TimeStamp=</span><span class="s">"2016-06-08T14:55:37Z"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;HotelReservations&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2014-06-20T22:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"OTA"</span><span class="nt">&gt;</span>WEB<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"Double"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-24"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-23"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-24"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"49.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2014-06-25"</span> <span class="na">Start=</span><span class="s">"2014-06-23"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"TC"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2015-06-18T00:00:00.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"42689"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"Comp"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Corp"</span> <span class="na">SourceOfBusiness=</span><span class="s">"Special Company"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"SGL"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-25"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-27"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"55.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-22"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"59.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts</span> <span class="na">IsPerRoom=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2015-06-25"</span> <span class="na">Start=</span><span class="s">"2015-06-22"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"DEU"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+      <span class="nt">&lt;/HotelReservations&gt;</span>
+    <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
+  <span class="nt">&lt;/Body&gt;</span>
+<span class="nt">&lt;/Envelope&gt;</span>
+</code></pre>
+<p>This endpoint posts a new reservation creation, modification or cancellation to BookingSuite RateManager. The immediate response is a standard HTTP code (Ack / Nack).</p>
+
+<p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><strong>TRY IT</strong></a></td>
+<td><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>SEE RESULT</strong></a></td>
+</tr>
+</tbody></table>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&lt;OTA_ResNotifRQ ResStatus=”Commit”/&gt;</code></td>
+<td>Transactional status of the reservation. It can be:<br>- &lsquo;Commit&rsquo; (creates a new reservation)<br>- &lsquo;Modify&rsquo; (updates an existing reservation)<br>- &lsquo;Cancel&rsquo; (cancels a reservation)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation&gt;</code></td>
+<td>Reservation block. We accept up to 1000 blocks.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation CreateDateTime=&quot;2005-10-09T08:51:45 UTC&quot;&gt;</code></td>
+<td>This is what we consider as the booking date. Please ensure the timezone matches that of the property.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation ResStatus=&quot;Reserved&quot;&gt;</code></td>
+<td>Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;UniqueID ID=&quot;3741&quot;/&gt;</code></td>
+<td>Unique reservation ID of the reservation that will permit us to link your message to the reservation in our database.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;BasicPropertyInfo HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;CompanyName Code=&quot;OTA&quot;&gt;WEB&lt;/CompanyName&gt;</code></td>
+<td>We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Roomstay&gt;</code> block is one room booked for the given reservation.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay MarketCode:&quot;CORP&quot;&gt;</code></td>
+<td><code class="prettyprint">MarketCode</code> is the intent of the stay, and what we take as segmentation data (leisure, corporate, etc).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay SourceOfBusiness=&quot;Booking.com&quot;&gt;</code></td>
+<td><code class="prettyprint">SourceOfBusiness</code> is what we take as the agency.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate&gt;</code></td>
+<td>One <code class="prettyprint">&lt;RoomRate&gt;</code> block represents one rate for one rate plan and one room type.<aside class="notice">If the booking has 2 different room types, there will be at least 2 <code class="prettyprint">RoomRate</code> blocks. If a booking has one room type, with 2 nights with a different rate plan, there will be 2 <code class="prettyprint">RoomRate</code> blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate RoomTypeCode=&quot;KING”&gt;</code></td>
+<td><code class="prettyprint">RoomTypeCode</code> is the room type. It must match the <code class="prettyprint">InvTypeCode</code> in inventory messages.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate RatePlanCode=&quot;RACK&quot;&gt;</code></td>
+<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate NumberOfUnits=&quot;1&quot;&gt;</code></td>
+<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Rate&gt;</code> block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 <code class="prettyprint">&lt;Rate&gt;</code> blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate EffectiveDate=&quot;2006-01-12&quot; ExpireDate=&quot;2006-01-15&quot;&gt;</code></td>
+<td>Dates to define the time range of the <code class="prettyprint">&lt;Rate&gt;</code>. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Base AmountAfterTax=&quot;100.00&quot; CurrencyCode=&quot;EUR&quot;/&gt;</code></td>
+<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;AgeQualifyingCode=&quot;10&quot; Count=&quot;2&quot;&gt;</code></td>
+<td>This block represents the number of people in the <code class="prettyprint">&lt;RoomStay&gt;</code>. The <code class="prettyprint">AgeQualifyingCode=10</code> is the number of adults (in <code class="prettyprint">Count</code> value), and <code class="prettyprint">AgeQualifyingCode=8</code> is the number of children.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;CountryName Code=&quot;UK&quot;/&gt;</code></td>
+<td>The only information we take from guests is their country of origin for segmentation analysis.</td>
+</tr>
+</tbody></table>

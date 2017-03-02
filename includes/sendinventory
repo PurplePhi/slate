@@ -1,0 +1,128 @@
+<h2 id="send-inventory">Send Inventory</h2>
+
+<blockquote>
+<p>Example inventory message</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsertextToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>usertext<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password</span> <span class="na">Type=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-usertext-token-profile-1.0#PasswordText"</span><span class="nt">&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsertextToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;wsa:CorrelationID&gt;</span>9e0205ce-e16b-4131-a44e-d2765cf76a76<span class="nt">&lt;/wsa:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"9"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"6"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+      <span class="nt">&lt;/Inventories&gt;</span>
+    <span class="nt">&lt;/OTA_HotelInvCountNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<p>The Hotel Inventory Count message provides the ability for a PMS to post inventory amounts.</p>
+
+<p>We support the following inventory codes (CountType in the message body):</p>
+
+<ul>
+<li><code class="prettyprint">1</code> <strong>Physical</strong> - number of rooms/units physically existing on the property</li>
+<li><code class="prettyprint">2</code> <strong>Definitive availability</strong> - number of rooms/units available, minus number of allotments still available</li>
+<li><code class="prettyprint">3</code> <strong>Tentative availability</strong> - number of allotments still available</li>
+<li><code class="prettyprint">4</code> <strong>Definitive sold</strong> - number of rooms/units sold - status is confirmed</li>
+<li><code class="prettyprint">5</code> <strong>Tentative sold</strong> - number of rooms/units sold - status is option</li>
+<li><code class="prettyprint">6</code> <strong>Out of order</strong> - number of rooms/units temporarily unavailable (e.g. remodel, repair, etc.)</li>
+<li><code class="prettyprint">8</code> <strong>Out of inventory</strong> - number of rooms/units which are indefinitely unavailable (e.g. construction)</li>
+</ul>
+
+<aside class="warning">You must always use all the CountTypes 1, 2, 3, 4, 5, 6 and 8 in every message (even if Count = 0).</aside>
+
+<aside class="notice">The resulting occupancy will be computed this way:<br>
+<b>(Definitive sold + Tentative sold + Out of order) / (Physical - Out of inventory)</b></aside>
+
+<p>You should send an update for all the dates and room types modified after each inventory modification.</p>
+
+<p>It is also required to send a full inventory update every 24 hours to correct any missed messages.</p>
+
+<p>If it is not possible to send only the dates and room types modified, instead send a full update every hour (all room types, full horizon 365 days).</p>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&lt;Inventories HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Inventory&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Inventory&gt;</code> block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;StatusApplicationControl Start=&quot;2015-09-01&quot;&gt;</code></td>
+<td><code class="prettyprint">Start</code> is the stay date to be processed.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;StatusApplicationControl InvTypeCode=&quot;King&quot;&gt;</code></td>
+<td><code class="prettyprint">InvTypeCode</code> is the room type code.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;InvCount CountType=&quot;1&quot; Count=&quot;20&quot;/&gt;</code></td>
+<td>One <code class="prettyprint">&lt;InvCount&gt;</code> block defines the inventory count for one given status, for the considered date and room type.<br><br>The <code class="prettyprint">CountType</code> defines the room status based on the list above.<br>The <code class="prettyprint">Count</code> is the value of the updated inventory.</td>
+</tr>
+</tbody></table>

@@ -4,107 +4,219 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>BookingSuite RateManager Specifications</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #151515;
-  background-color: #ac4142;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #505050;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #d0d0d0;
-}
-.highlight .p, .highlight .pi {
-  color: #d0d0d0;
-}
-.highlight .gi {
-  color: #90a959;
-}
-.highlight .gd {
-  color: #ac4142;
-}
 .highlight .gh {
-  color: #6a9fb5;
-  background-color: #151515;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #aa759f;
-}
-.highlight .kc {
-  color: #d28445;
-}
-.highlight .kt {
-  color: #d28445;
-}
-.highlight .kd {
-  color: #d28445;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #90a959;
+  color: #999999;
 }
 .highlight .sr {
-  color: #75b5aa;
+  color: #f6aa11;
 }
-.highlight .si {
-  color: #8f5536;
+.highlight .go {
+  color: #888888;
 }
-.highlight .se {
-  color: #8f5536;
+.highlight .gp {
+  color: #555555;
 }
-.highlight .nn {
-  color: #f4bf75;
+.highlight .gs {
 }
-.highlight .nc {
-  color: #f4bf75;
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
 }
 .highlight .no {
-  color: #f4bf75;
+  color: #66d9ef;
 }
-.highlight .na {
-  color: #6a9fb5;
+.highlight .kt {
+  color: #66d9ef;
 }
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #90a959;
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
 }
 .highlight .ss {
-  color: #90a959;
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
 }
     </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
       <script src="javascripts/all.js"></script>
+    
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+
+<!-- Start of bks-connectivity Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","bks-connectivity.zendesk.com");
+/*]]>*/</script>
+<!-- End of bks-connectivity Zendesk Widget script -->
+
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" />
+        <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-        </div>
+      <img src="images/logodark.png" alt="Logodark" />
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -112,8 +224,7 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='#'>FAQ</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -121,227 +232,820 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p><img src="images/ratemanager.png" alt="ratemanager" /></p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<h3 id="what-we-do">What we do</h3>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p>The following document will explain how to connect your software with RateManager, a product of BookingSuite.</p>
 
-<h1 id="authentication">Authentication</h1>
+<p>RateManager combines user-friendly design and accessible rate recommendations to help hotels of all shapes and sizes to improve revenue performance and strengthen their overall business. If you wish to know more about the product itself, we recommend
+watching <a href="https://bookingsuite.wistia.com/medias/21rkh2ubmy">this video</a>.</p>
+
+          <h2 id="conventions">Conventions</h2>
+
+<h3 id="1-way-2-way">1-way, 2-way</h3>
+
+<p>We define connectivity as 1-way or 2-way.</p>
+
+<p>1-way refers solely to data transfer from your PMS to RateManager. This means that we will only be able to receive data from your system. It looks something like this:</p>
+
+<p><img src="images/connectivity_1way.jpg" alt="diagram" /></p>
+
+<p>2-way refers to data transfer from your PMS to RateManager, and RateManager rate updates back to your PMS. It looks something like this:</p>
+
+<p><img src="images/connectivity_2way.jpg" alt="diagram" /></p>
+
+<h3 id="reservation-data">Reservation data</h3>
+
+<p>Reservation data refers to all the data linked to a booking, any or all of which can impact the occupancy of a property. To make sure RateManager has everything it needs, please provide all information regarding sold rooms, as well as out-of-order/out-of-inventory rooms. Please do not send dummy rooms, nor any guest or property personal data, as these are not used by RateManager.</p>
+
+<p>The most basic functions of our RateManager product are dependent on computing the right occupancy and revenue, which is based on the data you provide us with. We need at least the following information per booking:</p>
+
+<ul>
+<li>a unique reservation ID to identify the booking, and update it if needed</li>
+<li>a check-in and check-out date</li>
+<li>a booking date</li>
+<li>a status indicator, at least for cancellations, that has an impact on the final occupancy</li>
+<li>an average rate. We recommend providing the exact rate per night, to avoid discrepancies between your reports and the ones we provide</li>
+</ul>
+
+<p>However, in addition to this core data, RateManager can also analyze additional segmentation data to provide more nuanced recommendations. By providing all information requested in this specification, we can provide the maximum benefits of RateManager to our mutual customers. </p>
+
+<h3 id="property-set-up-process">Property set-up process</h3>
+
+<p>Once the interface has been completed between RateManager and your PMS, we will be using a standardized process to set-up RateManager for new properties.</p>
+
+<p>It is important to understand that we use a property’s historical data to train our algorithm for that specific property. To this end, for each property set-up, a complete history of 2 years will be requested from you. This historical data will only be requested once, at the beginning of set-up. Afterwards, we will only need to update new data as it comes in.</p>
+
+<p>The property set-up process will usually be the following:</p>
+
+<ol>
+<li>Make the necessary configurations, depending of the methods and conventions used (hotel code mapping, FTP access, username and password set-up)</li>
+<li>PMS sends the property’s historical data of the last 2 years to RateManager</li>
+<li>PMS sends current data to RateManager, then activates live synchronization</li>
+</ol>
+
+          <h2 id="development-process">Development Process</h2>
+
+<h3 id="roadmap">Roadmap</h3>
+
+<p>We usually develop with PMS partners by following this roadmap:</p>
+
+<ol>
+<li>Scoping call after reading this documentation to confirm the process, answer any questions, and set development expectations</li>
+<li>Development of inventory message (HotelInvCountNotifRQ)</li>
+<li>Development of reservation message (HotelResNotifRQ) and group block messages (HotelInvBlockNotifRQ, optional)</li>
+<li>Development of the rate update</li>
+<li>Certification of the connection</li>
+<li>Testing with live data from pilot property</li>
+<li>Pilot testing with property</li>
+<li>Defining procedures for new property set-up</li>
+</ol>
+
+<h3 id="certification-process">Certification process</h3>
+
+<p>Once development of both the 1-way and 2-way connections are complete, we will perform certification testing. This will check basic scenarios to see if messages are being sent correctly, and if the resulting data is valid for our system.</p>
+
+<p>We will test the following scenarios:</p>
+
+<ul>
+<li>Create, modify, and cancel a single reservation </li>
+<li>Create, modify, and cancel a group reservation</li>
+<li>Create, modify, and cancel a group block (optional)</li>
+<li>Push a single rate, and verify that the rate in the PMS is updated</li>
+<li>Push multiple rates, and verify that all selected rates in the PMS are updated</li>
+</ul>
+
+          <h1 id="web-service">Web Service</h1>
+
+          <h2 id="getting-started">Getting Started</h2>
+
+<h3 id="overview">Overview</h3>
 
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>API endpoint</p>
 </blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight plaintext"><code>https://api.pricematch.travel/htng_message
+</code></pre>
+<p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<p>From PMS to BookingSuite RateManager (1-Way Connection):</p>
+
+<ul>
+<li><strong>OTA_HotelInvCountNotifRQ</strong> message to post inventory data (number of rooms built, sold available&hellip;)</li>
+<li><strong>OTA_HotelResNotifRQ</strong> message to post reservation creation, modification, cancellation</li>
+<li><strong>OTA_HotelInvBlockNotifRQ</strong> message to post group block allocation creation, modification, cancellation</li>
+</ul>
+
+<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection)</p>
+
+<ul>
+<li><strong>OTA_RatePlanNotifRQ</strong> message: BookingSuite RateManager posts rates triggered by user&rsquo;s validation on our website.</li>
+</ul>
+
+<h3 id="authentication">Authentication</h3>
 
 <blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
+<p>Authentication</p>
 </blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+<pre class="highlight xml"><code><span class="nt">&lt;Header&gt;</span>
+  <span class="nt">&lt;Security</span> <span class="na">mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;UsertextToken&gt;</span>
+      <span class="nt">&lt;Username&gt;</span>username_goes_here<span class="nt">&lt;/Username&gt;</span>
+      <span class="nt">&lt;Password&gt;</span>password_goes_here<span class="nt">&lt;/Password&gt;</span>
+    <span class="nt">&lt;/UsertextToken&gt;</span>
+  <span class="nt">&lt;/Security&gt;</span>
+<span class="nt">&lt;/Header&gt;</span>
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>We authenticate inbound messages with the SOAP protocol’s <code class="prettyprint">&lt;Security&gt;</code> field. We will provide you with a username and password to put into the header.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<p>Without this block, you will get a 400 error with the error message: &ldquo;SOAP Header not valid&rdquo;. </p>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
+<p>You should receive credentials when beginning the development phase - if not, please contact bookingsuite.connectivity@booking.com.</p>
 
-<p>This endpoint retrieves all kittens.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="message-type-summary">Message type summary</h3>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>HTNG type</th>
+<th>Goal</th>
+<th>Mandatory?</th>
+<th>Direction</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>OTA_HotelResNotifRQ</td>
+<td>Receiving property reservation data</td>
+<td>Yes</td>
+<td>PMS -&gt; RateManager</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>OTA_HotelInvCountNotifRQ</td>
+<td>Receiving property inventory data</td>
+<td>Yes</td>
+<td>PMS -&gt; RateManager</td>
+</tr>
+<tr>
+<td>OTA_HotelInvBlockNotifRQ</td>
+<td>Receiving property group block data</td>
+<td>No</td>
+<td>PMS -&gt; RateManager</td>
+</tr>
+<tr>
+<td>OTA_RatePlanNotifRQ</td>
+<td>Receiving rate update validated by the customer</td>
+<td>Yes</td>
+<td>RateManager -&gt; PMS</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+          <h2 id="send-inventory">Send Inventory</h2>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example inventory message</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsertextToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>usertext<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password</span> <span class="na">Type=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-usertext-token-profile-1.0#PasswordText"</span><span class="nt">&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsertextToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;wsa:CorrelationID&gt;</span>9e0205ce-e16b-4131-a44e-d2765cf76a76<span class="nt">&lt;/wsa:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"9"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+        <span class="nt">&lt;Inventory&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvCounts&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"4"</span> <span class="na">Count=</span><span class="s">"6"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"5"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"3"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"6"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/InvCounts&gt;</span>
+        <span class="nt">&lt;/Inventory&gt;</span>
+      <span class="nt">&lt;/Inventories&gt;</span>
+    <span class="nt">&lt;/OTA_HotelInvCountNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<p>The Hotel Inventory Count message provides the ability for a PMS to post inventory amounts.</p>
 
-<p>This endpoint retrieves a specific kitten.</p>
+<p>We support the following inventory codes (CountType in the message body):</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<ul>
+<li><code class="prettyprint">1</code> <strong>Physical</strong> - number of rooms/units physically existing on the property</li>
+<li><code class="prettyprint">2</code> <strong>Definitive availability</strong> - number of rooms/units available, minus number of allotments still available</li>
+<li><code class="prettyprint">3</code> <strong>Tentative availability</strong> - number of allotments still available</li>
+<li><code class="prettyprint">4</code> <strong>Definitive sold</strong> - number of rooms/units sold - status is confirmed</li>
+<li><code class="prettyprint">5</code> <strong>Tentative sold</strong> - number of rooms/units sold - status is option</li>
+<li><code class="prettyprint">6</code> <strong>Out of order</strong> - number of rooms/units temporarily unavailable (e.g. remodel, repair, etc.)</li>
+<li><code class="prettyprint">8</code> <strong>Out of inventory</strong> - number of rooms/units which are indefinitely unavailable (e.g. construction)</li>
+</ul>
 
-<h3 id="http-request">HTTP Request</h3>
+<aside class="warning">You must always use all the CountTypes 1, 2, 3, 4, 5, 6 and 8 in every message (even if Count = 0).</aside>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<aside class="notice">The resulting occupancy will be computed this way:<br>
+<b>(Definitive sold + Tentative sold + Out of order) / (Physical - Out of inventory)</b></aside>
 
-<h3 id="url-parameters">URL Parameters</h3>
+<p>You should send an update for all the dates and room types modified after each inventory modification.</p>
+
+<p>It is also required to send a full inventory update every 24 hours to correct any missed messages.</p>
+
+<p>If it is not possible to send only the dates and room types modified, instead send a full update every hour (all room types, full horizon 365 days).</p>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><code class="prettyprint">&lt;Inventories HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Inventory&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Inventory&gt;</code> block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;StatusApplicationControl Start=&quot;2015-09-01&quot;&gt;</code></td>
+<td><code class="prettyprint">Start</code> is the stay date to be processed.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;StatusApplicationControl InvTypeCode=&quot;King&quot;&gt;</code></td>
+<td><code class="prettyprint">InvTypeCode</code> is the room type code.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;InvCount CountType=&quot;1&quot; Count=&quot;20&quot;/&gt;</code></td>
+<td>One <code class="prettyprint">&lt;InvCount&gt;</code> block defines the inventory count for one given status, for the considered date and room type.<br><br>The <code class="prettyprint">CountType</code> defines the room status based on the list above.<br>The <code class="prettyprint">Count</code> is the value of the updated inventory.</td>
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
+          <h2 id="send-reservations">Send Reservations</h2>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+<blockquote>
+<p>Request body</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:htnga=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span> <span class="na">xmlns:wss=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wss:Security</span> <span class="na">mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wss:UsertextToken&gt;</span>
+        <span class="nt">&lt;wss:Username&gt;</span>test<span class="nt">&lt;/wss:Username&gt;</span>
+        <span class="nt">&lt;wss:Password&gt;</span>test<span class="nt">&lt;/wss:Password&gt;</span>
+      <span class="nt">&lt;/wss:UsertextToken&gt;</span>
+    <span class="nt">&lt;/wss:Security&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htnga:CorrelationID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/htnga:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Commit"</span> <span class="na">TimeStamp=</span><span class="s">"2016-06-08T14:55:37Z"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;HotelReservations&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2014-06-20T22:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"OTA"</span><span class="nt">&gt;</span>WEB<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"Double"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-24"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-23"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-24"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"49.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2014-06-25"</span> <span class="na">Start=</span><span class="s">"2014-06-23"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"TC"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2015-06-18T00:00:00.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"42689"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"Comp"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Corp"</span> <span class="na">SourceOfBusiness=</span><span class="s">"Special Company"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"SGL"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-25"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-27"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"55.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-22"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"59.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts</span> <span class="na">IsPerRoom=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2015-06-25"</span> <span class="na">Start=</span><span class="s">"2015-06-22"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"DEU"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+      <span class="nt">&lt;/HotelReservations&gt;</span>
+    <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
+  <span class="nt">&lt;/Body&gt;</span>
+<span class="nt">&lt;/Envelope&gt;</span>
+</code></pre>
+<p>This endpoint posts a new reservation creation, modification or cancellation to BookingSuite RateManager. The immediate response is a standard HTTP code (Ack / Nack).</p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th></th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><strong>TRY IT</strong></a></td>
+<td><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>SEE RESULT</strong></a></td>
 </tr>
 </tbody></table>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&lt;OTA_ResNotifRQ ResStatus=”Commit”/&gt;</code></td>
+<td>Transactional status of the reservation. It can be:<br>- &lsquo;Commit&rsquo; (creates a new reservation)<br>- &lsquo;Modify&rsquo; (updates an existing reservation)<br>- &lsquo;Cancel&rsquo; (cancels a reservation)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation&gt;</code></td>
+<td>Reservation block. We accept up to 1000 blocks.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation CreateDateTime=&quot;2005-10-09T08:51:45 UTC&quot;&gt;</code></td>
+<td>This is what we consider as the booking date. Please ensure the timezone matches that of the property.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;HotelReservation ResStatus=&quot;Reserved&quot;&gt;</code></td>
+<td>Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;UniqueID ID=&quot;3741&quot;/&gt;</code></td>
+<td>Unique reservation ID of the reservation that will permit us to link your message to the reservation in our database.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;BasicPropertyInfo HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;CompanyName Code=&quot;OTA&quot;&gt;WEB&lt;/CompanyName&gt;</code></td>
+<td>We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Roomstay&gt;</code> block is one room booked for the given reservation.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay MarketCode:&quot;CORP&quot;&gt;</code></td>
+<td><code class="prettyprint">MarketCode</code> is the intent of the stay, and what we take as segmentation data (leisure, corporate, etc).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomStay SourceOfBusiness=&quot;Booking.com&quot;&gt;</code></td>
+<td><code class="prettyprint">SourceOfBusiness</code> is what we take as the agency.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate&gt;</code></td>
+<td>One <code class="prettyprint">&lt;RoomRate&gt;</code> block represents one rate for one rate plan and one room type.<aside class="notice">If the booking has 2 different room types, there will be at least 2 <code class="prettyprint">RoomRate</code> blocks. If a booking has one room type, with 2 nights with a different rate plan, there will be 2 <code class="prettyprint">RoomRate</code> blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate RoomTypeCode=&quot;KING”&gt;</code></td>
+<td><code class="prettyprint">RoomTypeCode</code> is the room type. It must match the <code class="prettyprint">InvTypeCode</code> in inventory messages.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate RatePlanCode=&quot;RACK&quot;&gt;</code></td>
+<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RoomRate NumberOfUnits=&quot;1&quot;&gt;</code></td>
+<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate&gt;</code></td>
+<td>One <code class="prettyprint">&lt;Rate&gt;</code> block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 <code class="prettyprint">&lt;Rate&gt;</code> blocks.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate EffectiveDate=&quot;2006-01-12&quot; ExpireDate=&quot;2006-01-15&quot;&gt;</code></td>
+<td>Dates to define the time range of the <code class="prettyprint">&lt;Rate&gt;</code>. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Base AmountAfterTax=&quot;100.00&quot; CurrencyCode=&quot;EUR&quot;/&gt;</code></td>
+<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;AgeQualifyingCode=&quot;10&quot; Count=&quot;2&quot;&gt;</code></td>
+<td>This block represents the number of people in the <code class="prettyprint">&lt;RoomStay&gt;</code>. The <code class="prettyprint">AgeQualifyingCode=10</code> is the number of adults (in <code class="prettyprint">Count</code> value), and <code class="prettyprint">AgeQualifyingCode=8</code> is the number of children.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;CountryName Code=&quot;UK&quot;/&gt;</code></td>
+<td>The only information we take from guests is their country of origin for segmentation analysis.</td>
+</tr>
+</tbody></table>
+
+          <h2 id="send-group-blocks">Send Group Blocks</h2>
+
+          <h2 id="receive-rate-updates">Receive Rate Updates</h2>
+
+<blockquote>
+<p>Request body from RateManager to provider - POST url provided by you</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htng:CorrelationID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/htng:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:To&gt;</span>
+    <span class="nt">&lt;wsa:Action&gt;</span>http://htng.org/PWSWG/2010/12/RatePlan_SubmitRequest<span class="nt">&lt;/wsa:Action&gt;</span>
+    <span class="nt">&lt;wsa:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/wsa:ReplyTo&gt;</span>
+    <span class="nt">&lt;htng:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://api.pricematch.travel/rate_push_callback<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/htng:ReplyTo&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsernameToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>username<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Rates&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+          <span class="nt">&lt;/Rates&gt;</span>
+        <span class="nt">&lt;/RatePlan&gt;</span>
+      <span class="nt">&lt;/RatePlans&gt;</span>
+    <span class="nt">&lt;/OTA_HotelRatePlanNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<blockquote>
+<p>GET https://api.pricematch.travel/retrieve_responses?hotel_code=hotelcode&amp;username=user&amp;password=pass</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htng:CorrelationID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/htng:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:To&gt;</span>
+    <span class="nt">&lt;wsa:Action&gt;</span>http://htng.org/PWSWG/2010/12/RatePlan_SubmitRequest<span class="nt">&lt;/wsa:Action&gt;</span>
+    <span class="nt">&lt;wsa:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/wsa:ReplyTo&gt;</span>
+    <span class="nt">&lt;htng:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://api.pricematch.travel/rate_push_callback<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/htng:ReplyTo&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsernameToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>username<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Rates&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+          <span class="nt">&lt;/Rates&gt;</span>
+        <span class="nt">&lt;/RatePlan&gt;</span>
+      <span class="nt">&lt;/RatePlans&gt;</span>
+    <span class="nt">&lt;/OTA_HotelRatePlanNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<p>This message allows us to notify your system about rate updates that a property would like to perform, and lets you handle channel management. These rate updates can be triggered manually by the property, or automatically according to RateManager settings decided by the property (difference with the current price, dates, etc&hellip;).</p>
+
+<p>The message contains the list of the new prices for different check-in dates and their corresponding conditions (room type, the number of guests, and the rate plan). Since our Revenue Management System and your system use different codes (hotel codes, room codes, etc.), we should agree beforehand on which system codes we should use in the message. By default, we assume we will use all your system codes. Please let us know if you want to do otherwise.
+<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner.</aside></p>
+
+<h3 id="push-mode-post-from-ratemanager-to-your-system">Push Mode (POST from RateManager to your system)</h3>
+
+<p>You must provide a web service to which we can send HTTP POST requests with the <code class="prettyprint">OTA_HotelRatePlanNotifRQ</code> message inside a SOAP envelope as the body. You have to apply the updates asynchronously: this means you have to respond to our POST before trying to send the rate updates to any other system. The response should be quick, regardless of the number of rate updates, and any costly computation that takes more than few seconds should be performed asynchronously.</p>
+
+<p>You must also inform us about the success or the failure of the rate push by sending a POST request to the callback url. If the update failed, you must provide us with a helpful error message to understand the issue. It will help us fix a whole range of problems without involving your support team, and make communication easy and efficient. You should provide different error messages for the following errors:</p>
+
+<ul>
+<li>If the username/password is wrong</li>
+<li>If the connection is not activated/configured</li>
+<li>If the hotel code is not correct or not associated with the username/password.</li>
+<li>If the rate plan is wrong</li>
+<li>If one of the room codes is wrong (please specify which code(s))</li>
+<li>If anything else prevented the success of the rate update</li>
+</ul>
+
+<aside class="notice">Regarding security, we use dynamic IP, so please do not use any IP whitelisting for your web service. If you are concerned with security, please enable SSL/HTTPS.</aside>
+
+<h3 id="pull-mode-get-from-your-system-to-ratemanager">Pull Mode (GET from your system to RateManager)</h3>
+
+<p>You can also choose to collect the rate updates from our system via a GET. In this mode, you should hit our endpoint periodically, ideally every 5 minutes or so, to receive the rate updates that haven&rsquo;t been sent yet.</p>
+
+<p><code class="prettyprint">GET https://api.pricematch.travel/retrieve_responses?hotel_code=hotelcode&amp;username=user&amp;password=pass</code></p>
+
+<p>This endpoint works as a queueing system. Meaning that when you send a GET request, If we have rate updates to send, you will get only the one on top of the queue, and we’ll delete it from our system. So that when you GET again, the next rate update will be send.</p>
+
+<p>If we don&rsquo;t have any rate updates to send, we&rsquo;ll respond with a 204 status code (no content).</p>
+
+<p>When receiving a rate, you should keep sending another GET request in a loop, until you receive a 204. That’s very important, otherwise you might get into a condition where you never manage to fetch all the rates updates we have.</p>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&lt;wsa:MessageID&gt;9ff77969-348d&lt;/wsa:MessageID&gt;</code></td>
+<td>The <code class="prettyprint">MessageID</code>. You should use it inside the asynchronous callback message.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;wsa:Address&gt;https://api.pricematch.travel/rate_plan_notif_callback&lt;/wsa:Address&gt;</code></td>
+<td>The URL to send the asynchronous call back message.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;wsse:UsernameToken&gt;</code></td>
+<td>This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RatePlans HotelCode=&quot;13864&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RatePlan RatePlanCode=&quot;BAR&quot;&gt;</code></td>
+<td>The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate Start=&quot;2015-03-05&quot; End=&quot;2015-03-05&quot;&gt;</code></td>
+<td><code class="prettyprint">Start</code> and <code class="prettyprint">End</code> are the date range attributes. Both are inclusive.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate CurrencyCode=&quot;EUR&quot;&gt;</code></td>
+<td><code class="prettyprint">Currency</code> is the currency considered for this rate block.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate InvTypeCode=&quot;DOUBLE&quot;&gt;</code></td>
+<td><code class="prettyprint">InvTypeCode</code> can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice).</td>
+</tr>
+<tr>
+<td><BaseByGuestAmt NumberOfGuests="1" AmountAfterTax="155"></td>
+<td><code class="prettyprint">NumberOfGuest</code> is the number of guests considered for the given amount, rate policy and room type.<br><code class="prettyprint">AmountAfterTax</code> is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="sandbox">Sandbox</h1>
+
+<p>The sandbox gives you a safe place to send and view messages for testing purposes.</p>
+
+<p>The following information will be provided upon the start of development:</p>
+
+<ul>
+<li><strong>Message Credentials (Username &amp; Password)</strong>: These are unique per PMS</li>
+<li><strong>Hotel Code</strong>: This is a sample hotel code that permits you to route messages to your specific sandbox environment</li>
+<li><strong>Sandbox URL</strong>: This will redirect you to the sandbox (messages received; their responses; reservations that are saved; resulting inventory/occupancy)</li>
+</ul>
+
+<aside class="notice">If you did not receive your sandbox information, please request it at bookingsuite.connectivity@booking.com</aside>
+
+<h2 id="using-the-sandbox">Using the sandbox</h2>
+
+<p>Your sandbox consists of two main sections: Reservations/Inventory and Rates push.</p>
+
+<p><img src="images/sandbox/1.png" alt="sandbox" /></p>
+
+<p>Depending on your agreement with BookingSuite, the Rates push tab may be disabled at first. It can be activated later when needed by contacting bookingsuite.connectivity@booking.com, or via the Help button in the lower-left corner of the screen.</p>
+
+<p>The following articles will explain the individual sections within each tab.</p>
+
+<h2 id="messages-received">Messages received</h2>
+
+<p>Every message you send to our endpoint (https://api.pricematch.travel/htng_message) will appear here. This requires having the correct username and password in the SOAP header of the message.</p>
+
+<p><img src="images/sandbox/2.png" alt="sandbox" /></p>
+
+<p>The last 10 messages received are sorted here by timestamp in descending order. You can download each message by clicking on its name. You will also be able to see any errors appearing in the messages with a brief explanation.</p>
+
+<p><img src="images/sandbox/3.png" alt="sandbox" /></p>
+
+<h2 id="reservations">Reservations</h2>
+
+<p>The Reservations view lists the reservations sent via OTA_HotelResNotifRQ, sorted in descending order by modified date. Here you can see core information that we collect from each reservation: </p>
+
+<ul>
+<li>A unique reservation ID</li>
+<li>Check-in date</li>
+<li>Check-out date</li>
+<li>Booking date</li>
+<li>Price</li>
+<li>Room type</li>
+<li>Number of reservations </li>
+<li>Status of the reservation (confirmed or cancelled)</li>
+</ul>
+
+<p>The default currency for your sandbox hotel is set to the Euro (EUR). Please let us know if you wish to change this default currency to another type. Any reservations with prices besides the default currency will automatically be converted without issue.</p>
+
+<p><img src="images/sandbox/4.png" alt="sandbox" /></p>
+
+<p>During the development of reservation messages, it is useful to check them in the sandbox to see whether the information that we are displaying matches what you sent to the platform.</p>
+
+<p>If you wish to start over at any point, you can delete all reservations by clicking on the “Delete reservations” button at the top of the list.</p>
+
+<h2 id="inventory">Inventory</h2>
+
+<p>The inventory tab will show you the result of the hotel_inv_count_notif message. The inventory messages should reflect the changes in the reservation messages, so please make sure that both tabs are updated with every new reservation.</p>
+
+<p>The default sandbox test hotel has 100 rooms, and your inventory messages should be based on that amount. The Inventory view will show you the room-nights for the next 30 days for all room types, divided into each CountType that we use.</p>
+
+<p><img src="images/sandbox/5.png" alt="sandbox" /></p>
+
+<p>If you wish to start over at any point, you can delete the entire inventory by clicking on the “Delete
+Inventory” button at the top of the list.</p>
+
+<h2 id="final-occupancy">Final occupancy</h2>
+
+<p>The Final occupancy tab will display the end result of the reservations and inventory messages received. Once you have successfully sent both message types, check Final occupancy to see if there are any discrepancies. Usually if something is wrong, it will be most noticeable in the occupancy percentages (i.e. over 100%, negative numbers, etc.).
+<aside class="notice">Occupancy is calculated by the following formula:<br>
+<b>(Definitive sold + Tentative sold + Out of order) / (Physical - Out of inventory)</b></aside></p>
+
+<p><img src="images/sandbox/6.png" alt="sandbox" /></p>
+
+<h2 id="codes-mapping">Codes Mapping</h2>
+
+<p>The Codes Mapping tab is used for setting up the rate pushes in a 2-way connection. You will be able to add the URL, username, password and hotel code for messages. Don&rsquo;t forget to tick the &ldquo;Connect to channel manager&rdquo; option - this will enable the 2-way connection. In this context, “channel manager” refers to the system that receives the rate push, which can be a PMS or channel manager.</p>
+
+<p><img src="images/sandbox/7.png" alt="sandbox" /></p>
+
+<p>Beneath that, you will find 4 test room/rate types that would correspond to the &ldquo;calendar view&rdquo; in our product: a double room, a single room, a suite and a family room - all set to breakfast not included, refundable rate. Click on the blue plus sign to add mapping for these rooms.</p>
+
+<p><img src="images/sandbox/8.png" alt="sandbox" /></p>
+
+<p>Mapping can be done for multiple room types, rates and occupancies. Below is an example of a
+mapping for two different rate plans for the same room type:</p>
+
+<p><img src="images/sandbox/9.png" alt="sandbox" /></p>
+
+<p>In this example, a rate push from the RateManager calendar view will update two rates: the base rate (BB-GR), and an additional rate (HB-GR) which will always be 10% higher than the base rate.</p>
+
+<h2 id="send-rates">Send rates</h2>
+
+<p>The RateManager platform will calculate rate recommendations for each of the next 360 days for the room/rate combinations set in each calendar view. The property can choose to update their rates based on these recommendations manually, as individual rates for specific dates, or in batches. There is also an autopilot feature that can be enabled, which pushes new rates every 4 hours based on pre-set rules defined by the property.
+<aside class="warning">Autopilot can push a large amount of rates at once, so please ensure that RateManager has permission in your system to perform these actions (anti-flooding policies, etc.).</aside></p>
+
+<p>The Send rates tab in your sandbox mimics the manual update feature for testing. With a live property, the property owner will be triggering rate updates.</p>
+
+<p>Once you have set everything up under Codes Mapping, you can begin to test sending rates. You can choose a date and room type, then set a price.</p>
+
+<p><img src="images/sandbox/10.png" alt="sandbox" /></p>
+
+<p>You can send rates one by one, or queue up several of them by clicking on the blue plus sign. </p>
+
+<p><img src="images/sandbox/11.png" alt="sandbox" /></p>
+
+<aside class="notice">Please note that you have to add rates to the queue before sending them (even if only sending one rate).</aside>
+
+<p>You can view the results of the rates you sent in the channel manager logs.</p>
+
+<p><img src="images/sandbox/12.png" alt="sandbox" /></p>
+
+<p>If you have any questions, or sandbox adjustment requests, please contact us at bookingsuite.connectivity@booking.com or via the Help button in the lower-left corner of the screen.</p>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-          </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,173 @@
+<h2 id="receive-rate-updates">Receive Rate Updates</h2>
+
+<blockquote>
+<p>Request body from RateManager to provider - POST url provided by you</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htng:CorrelationID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/htng:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:To&gt;</span>
+    <span class="nt">&lt;wsa:Action&gt;</span>http://htng.org/PWSWG/2010/12/RatePlan_SubmitRequest<span class="nt">&lt;/wsa:Action&gt;</span>
+    <span class="nt">&lt;wsa:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/wsa:ReplyTo&gt;</span>
+    <span class="nt">&lt;htng:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://api.pricematch.travel/rate_push_callback<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/htng:ReplyTo&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsernameToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>username<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Rates&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+          <span class="nt">&lt;/Rates&gt;</span>
+        <span class="nt">&lt;/RatePlan&gt;</span>
+      <span class="nt">&lt;/RatePlans&gt;</span>
+    <span class="nt">&lt;/OTA_HotelRatePlanNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<blockquote>
+<p>GET https://api.pricematch.travel/retrieve_responses?hotel_code=hotelcode&amp;username=user&amp;password=pass</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htng:CorrelationID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/htng:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:To&gt;</span>
+    <span class="nt">&lt;wsa:Action&gt;</span>http://htng.org/PWSWG/2010/12/RatePlan_SubmitRequest<span class="nt">&lt;/wsa:Action&gt;</span>
+    <span class="nt">&lt;wsa:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://partners.url.com<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/wsa:ReplyTo&gt;</span>
+    <span class="nt">&lt;htng:ReplyTo&gt;</span>
+      <span class="nt">&lt;wsa:Address&gt;</span>https://api.pricematch.travel/rate_push_callback<span class="nt">&lt;/wsa:Address&gt;</span>
+    <span class="nt">&lt;/htng:ReplyTo&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wsse:UsernameToken&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>username<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+      <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
+    <span class="nt">&lt;/wsse:Security&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Rates&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;BaseByGuestAmts&gt;</span>
+                <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
+            <span class="nt">&lt;/Rate&gt;</span>
+          <span class="nt">&lt;/Rates&gt;</span>
+        <span class="nt">&lt;/RatePlan&gt;</span>
+      <span class="nt">&lt;/RatePlans&gt;</span>
+    <span class="nt">&lt;/OTA_HotelRatePlanNotifRQ&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
+</code></pre>
+<p>This message allows us to notify your system about rate updates that a property would like to perform, and lets you handle channel management. These rate updates can be triggered manually by the property, or automatically according to RateManager settings decided by the property (difference with the current price, dates, etc&hellip;).</p>
+
+<p>The message contains the list of the new prices for different check-in dates and their corresponding conditions (room type, the number of guests, and the rate plan). Since our Revenue Management System and your system use different codes (hotel codes, room codes, etc.), we should agree beforehand on which system codes we should use in the message. By default, we assume we will use all your system codes. Please let us know if you want to do otherwise.
+<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner.</aside></p>
+
+<h3 id="push-mode-post-from-ratemanager-to-your-system">Push Mode (POST from RateManager to your system)</h3>
+
+<p>You must provide a web service to which we can send HTTP POST requests with the <code class="prettyprint">OTA_HotelRatePlanNotifRQ</code> message inside a SOAP envelope as the body. You have to apply the updates asynchronously: this means you have to respond to our POST before trying to send the rate updates to any other system. The response should be quick, regardless of the number of rate updates, and any costly computation that takes more than few seconds should be performed asynchronously.</p>
+
+<p>You must also inform us about the success or the failure of the rate push by sending a POST request to the callback url. If the update failed, you must provide us with a helpful error message to understand the issue. It will help us fix a whole range of problems without involving your support team, and make communication easy and efficient. You should provide different error messages for the following errors:</p>
+
+<ul>
+<li>If the username/password is wrong</li>
+<li>If the connection is not activated/configured</li>
+<li>If the hotel code is not correct or not associated with the username/password.</li>
+<li>If the rate plan is wrong</li>
+<li>If one of the room codes is wrong (please specify which code(s))</li>
+<li>If anything else prevented the success of the rate update</li>
+</ul>
+
+<aside class="notice">Regarding security, we use dynamic IP, so please do not use any IP whitelisting for your web service. If you are concerned with security, please enable SSL/HTTPS.</aside>
+
+<h3 id="pull-mode-get-from-your-system-to-ratemanager">Pull Mode (GET from your system to RateManager)</h3>
+
+<p>You can also choose to collect the rate updates from our system via a GET. In this mode, you should hit our endpoint periodically, ideally every 5 minutes or so, to receive the rate updates that haven&rsquo;t been sent yet.</p>
+
+<p><code class="prettyprint">GET https://api.pricematch.travel/retrieve_responses?hotel_code=hotelcode&amp;username=user&amp;password=pass</code></p>
+
+<p>This endpoint works as a queueing system. Meaning that when you send a GET request, If we have rate updates to send, you will get only the one on top of the queue, and we’ll delete it from our system. So that when you GET again, the next rate update will be send.</p>
+
+<p>If we don&rsquo;t have any rate updates to send, we&rsquo;ll respond with a 204 status code (no content).</p>
+
+<p>When receiving a rate, you should keep sending another GET request in a loop, until you receive a 204. That’s very important, otherwise you might get into a condition where you never manage to fetch all the rates updates we have.</p>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&lt;wsa:MessageID&gt;9ff77969-348d&lt;/wsa:MessageID&gt;</code></td>
+<td>The <code class="prettyprint">MessageID</code>. You should use it inside the asynchronous callback message.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;wsa:Address&gt;https://api.pricematch.travel/rate_plan_notif_callback&lt;/wsa:Address&gt;</code></td>
+<td>The URL to send the asynchronous call back message.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;wsse:UsernameToken&gt;</code></td>
+<td>This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RatePlans HotelCode=&quot;13864&quot;&gt;</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;RatePlan RatePlanCode=&quot;BAR&quot;&gt;</code></td>
+<td>The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate Start=&quot;2015-03-05&quot; End=&quot;2015-03-05&quot;&gt;</code></td>
+<td><code class="prettyprint">Start</code> and <code class="prettyprint">End</code> are the date range attributes. Both are inclusive.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate CurrencyCode=&quot;EUR&quot;&gt;</code></td>
+<td><code class="prettyprint">Currency</code> is the currency considered for this rate block.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;Rate InvTypeCode=&quot;DOUBLE&quot;&gt;</code></td>
+<td><code class="prettyprint">InvTypeCode</code> can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice).</td>
+</tr>
+<tr>
+<td><BaseByGuestAmt NumberOfGuests="1" AmountAfterTax="155"></td>
+<td><code class="prettyprint">NumberOfGuest</code> is the number of guests considered for the given amount, rate policy and room type.<br><code class="prettyprint">AmountAfterTax</code> is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people.</td>
+</tr>
+</tbody></table>

@@ -1,0 +1,82 @@
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="overview">Overview</h3>
+
+<blockquote>
+<p>API endpoint</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://api.pricematch.travel/htng_message
+</code></pre>
+<p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
+
+<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
+
+<p>From PMS to BookingSuite RateManager (1-Way Connection):</p>
+
+<ul>
+<li><strong>OTA_HotelInvCountNotifRQ</strong> message to post inventory data (number of rooms built, sold available&hellip;)</li>
+<li><strong>OTA_HotelResNotifRQ</strong> message to post reservation creation, modification, cancellation</li>
+<li><strong>OTA_HotelInvBlockNotifRQ</strong> message to post group block allocation creation, modification, cancellation</li>
+</ul>
+
+<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection)</p>
+
+<ul>
+<li><strong>OTA_RatePlanNotifRQ</strong> message: BookingSuite RateManager posts rates triggered by user&rsquo;s validation on our website.</li>
+</ul>
+
+<h3 id="authentication">Authentication</h3>
+
+<blockquote>
+<p>Authentication</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="nt">&lt;Header&gt;</span>
+  <span class="nt">&lt;Security</span> <span class="na">mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;UsertextToken&gt;</span>
+      <span class="nt">&lt;Username&gt;</span>username_goes_here<span class="nt">&lt;/Username&gt;</span>
+      <span class="nt">&lt;Password&gt;</span>password_goes_here<span class="nt">&lt;/Password&gt;</span>
+    <span class="nt">&lt;/UsertextToken&gt;</span>
+  <span class="nt">&lt;/Security&gt;</span>
+<span class="nt">&lt;/Header&gt;</span>
+</code></pre>
+<p>We authenticate inbound messages with the SOAP protocol’s <code class="prettyprint">&lt;Security&gt;</code> field. We will provide you with a username and password to put into the header.</p>
+
+<p>Without this block, you will get a 400 error with the error message: &ldquo;SOAP Header not valid&rdquo;. </p>
+
+<p>You should receive credentials when beginning the development phase - if not, please contact bookingsuite.connectivity@booking.com.</p>
+
+<h3 id="message-type-summary">Message type summary</h3>
+
+<table><thead>
+<tr>
+<th>HTNG type</th>
+<th>Goal</th>
+<th>Mandatory?</th>
+<th>Direction</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OTA_HotelResNotifRQ</td>
+<td>Receiving property reservation data</td>
+<td>Yes</td>
+<td>PMS -&gt; RateManager</td>
+</tr>
+<tr>
+<td>OTA_HotelInvCountNotifRQ</td>
+<td>Receiving property inventory data</td>
+<td>Yes</td>
+<td>PMS -&gt; RateManager</td>
+</tr>
+<tr>
+<td>OTA_HotelInvBlockNotifRQ</td>
+<td>Receiving property group block data</td>
+<td>No</td>
+<td>PMS -&gt; RateManager</td>
+</tr>
+<tr>
+<td>OTA_RatePlanNotifRQ</td>
+<td>Receiving rate update validated by the customer</td>
+<td>Yes</td>
+<td>RateManager -&gt; PMS</td>
+</tr>
+</tbody></table>

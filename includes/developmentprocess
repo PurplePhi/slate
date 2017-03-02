@@ -1,0 +1,30 @@
+<h2 id="development-process">Development Process</h2>
+
+<h3 id="roadmap">Roadmap</h3>
+
+<p>We usually develop with PMS partners by following this roadmap:</p>
+
+<ol>
+<li>Scoping call after reading this documentation to confirm the process, answer any questions, and set development expectations</li>
+<li>Development of inventory message (HotelInvCountNotifRQ)</li>
+<li>Development of reservation message (HotelResNotifRQ) and group block messages (HotelInvBlockNotifRQ, optional)</li>
+<li>Development of the rate update</li>
+<li>Certification of the connection</li>
+<li>Testing with live data from pilot property</li>
+<li>Pilot testing with property</li>
+<li>Defining procedures for new property set-up</li>
+</ol>
+
+<h3 id="certification-process">Certification process</h3>
+
+<p>Once development of both the 1-way and 2-way connections are complete, we will perform certification testing. This will check basic scenarios to see if messages are being sent correctly, and if the resulting data is valid for our system.</p>
+
+<p>We will test the following scenarios:</p>
+
+<ul>
+<li>Create, modify, and cancel a single reservation </li>
+<li>Create, modify, and cancel a group reservation</li>
+<li>Create, modify, and cancel a group block (optional)</li>
+<li>Push a single rate, and verify that the rate in the PMS is updated</li>
+<li>Push multiple rates, and verify that all selected rates in the PMS are updated</li>
+</ul>
