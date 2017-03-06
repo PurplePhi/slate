@@ -122,17 +122,9 @@
 
 <p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
 
-<table><thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><strong>TRY IT</strong></a></td>
-<td><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>SEE RESULT</strong></a></td>
-</tr>
-</tbody></table>
+<p><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
+
+<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>Check result in sandbox</strong></a></p>
 
 <h3 id="fields-we-consider">Fields we consider</h3>
 
