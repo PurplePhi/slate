@@ -123,9 +123,9 @@ This endpoint posts a new reservation creation, modification or cancellation to 
 
 Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a `<HotelReservation>` block, and must be gathered under the same transactional status.
 
-|  |  |
-| --- | --- |
-| [**TRY IT**](https://app.getpostman.com/run-collection/e6e6588af220c37af237) | [**SEE RESULT**](https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f) |
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e6e6588af220c37af237)
+
+[**Check result in sandbox**](https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f)
 
 ### Fields we consider
 
