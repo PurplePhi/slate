@@ -223,9 +223,6 @@
         <ul class="search-results"></ul>
       <div id="toc">
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>FAQ</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
@@ -236,7 +233,7 @@
 
 <p>The following specification will explain how to connect your software with RateManager, a product of BookingSuite.</p>
 
-<p>RateManager combines user-friendly design and accessible rate recommendations to help hotels of all shapes and sizes improve revenue performance and strengthen their overall business. We recommend watching <a href="https://bookingsuite.wistia.com/medias/21rkh2ubmy">this video</a> to learn more about the services that Ratemanager provides.</p>
+<p>RateManager combines user-friendly design and accessible rate recommendations to help hotels of all shapes and sizes improve revenue performance and strengthen their overall business. We recommend watching <a href="https://bookingsuite.wistia.com/medias/21rkh2ubmy" target="_blank">this video</a> to learn more about the services that Ratemanager provides.</p>
 
           <h2 id="conventions">Conventions</h2>
 
@@ -324,9 +321,9 @@
 </blockquote>
 <pre class="highlight plaintext"><code>https://api.pricematch.travel/htng_message
 </code></pre>
-<p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
+<p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/" target="_blank">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
 
-<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
+<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm" target="_blank">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
 
 <p>From PMS to BookingSuite RateManager (1-Way Connection):</p>
 
@@ -653,7 +650,7 @@
 
 <p><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
 
-<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>Check result in sandbox</strong></a></p>
+<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f" target="_blank"><strong>Check result in sandbox</strong></a></p>
 
 <h3 id="fields-we-consider">Fields we consider</h3>
 
@@ -729,7 +726,7 @@
 </tr>
 <tr>
 <td><code class="prettyprint">&lt;Base AmountAfterTax=&quot;100.00&quot; CurrencyCode=&quot;EUR&quot;/&gt;</code></td>
-<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>).</td>
+<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>).</td>
 </tr>
 <tr>
 <td><code class="prettyprint">&lt;AgeQualifyingCode=&quot;10&quot; Count=&quot;2&quot;&gt;</code></td>
@@ -740,8 +737,6 @@
 <td>The only information we take from guests is their country of origin for segmentation analysis.</td>
 </tr>
 </tbody></table>
-
-          <h2 id="send-group-blocks">Send Group Blocks</h2>
 
           <h2 id="receive-rate-updates">Receive Rate Updates</h2>
 

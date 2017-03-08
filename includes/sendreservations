@@ -124,7 +124,7 @@
 
 <p><a href="https://app.getpostman.com/run-collection/e6e6588af220c37af237"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
 
-<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f"><strong>Check result in sandbox</strong></a></p>
+<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f" target="_blank"><strong>Check result in sandbox</strong></a></p>
 
 <h3 id="fields-we-consider">Fields we consider</h3>
 
@@ -200,7 +200,7 @@
 </tr>
 <tr>
 <td><code class="prettyprint">&lt;Base AmountAfterTax=&quot;100.00&quot; CurrencyCode=&quot;EUR&quot;/&gt;</code></td>
-<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>).</td>
+<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>).</td>
 </tr>
 <tr>
 <td><code class="prettyprint">&lt;AgeQualifyingCode=&quot;10&quot; Count=&quot;2&quot;&gt;</code></td>

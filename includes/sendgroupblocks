@@ -1,1 +1,129 @@
 <h2 id="send-group-blocks">Send Group Blocks</h2>
+
+<blockquote>
+<p>Create a block allocation</p>
+</blockquote>
+<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:htnga=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span> <span class="na">xmlns:wss=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wss:Security</span> <span class="na">mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;wss:UsertextToken&gt;</span>
+        <span class="nt">&lt;wss:Username&gt;</span>test<span class="nt">&lt;/wss:Username&gt;</span>
+        <span class="nt">&lt;wss:Password&gt;</span>test<span class="nt">&lt;/wss:Password&gt;</span>
+      <span class="nt">&lt;/wss:UsertextToken&gt;</span>
+    <span class="nt">&lt;/wss:Security&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;htnga:CorrelationID&gt;</span>769479e5-4812-4475-a801-8853c54df24e<span class="nt">&lt;/htnga:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
+  <span class="nt">&lt;/soap:Header&gt;</span>
+  <span class="nt">&lt;Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Commit"</span> <span class="na">TimeStamp=</span><span class="s">"2016-06-08T14:55:37Z"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;HotelReservations&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2014-06-20T22:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"OTA"</span><span class="nt">&gt;</span>WEB<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"Double"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-24"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2014-06-23"</span> <span class="na">ExpireDate=</span><span class="s">"2014-06-24"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"49.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2014-06-25"</span> <span class="na">Start=</span><span class="s">"2014-06-23"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"TC"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2015-06-18T00:00:00.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"42689"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;POS&gt;</span>
+            <span class="nt">&lt;Source&gt;</span>
+              <span class="nt">&lt;BookingChannel&gt;</span>
+                <span class="nt">&lt;CompanyName</span> <span class="na">Code=</span><span class="s">"Comp"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/CompanyName&gt;</span>
+              <span class="nt">&lt;/BookingChannel&gt;</span>
+            <span class="nt">&lt;/Source&gt;</span>
+          <span class="nt">&lt;/POS&gt;</span>
+          <span class="nt">&lt;RoomStays&gt;</span>
+            <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Corp"</span> <span class="na">SourceOfBusiness=</span><span class="s">"Special Company"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;RoomRates&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"SGL"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;Rates&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-25"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-27"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"55.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2015-06-22"</span> <span class="na">ExpireDate=</span><span class="s">"2015-06-25"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"59.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/Rate&gt;</span>
+                  <span class="nt">&lt;/Rates&gt;</span>
+                <span class="nt">&lt;/RoomRate&gt;</span>
+              <span class="nt">&lt;/RoomRates&gt;</span>
+              <span class="nt">&lt;GuestCounts</span> <span class="na">IsPerRoom=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">Count=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;GuestCount</span> <span class="na">AgeQualifyingCode=</span><span class="s">"8"</span> <span class="na">Count=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;/GuestCounts&gt;</span>
+              <span class="nt">&lt;TimeSpan</span> <span class="na">End=</span><span class="s">"2015-06-25"</span> <span class="na">Start=</span><span class="s">"2015-06-22"</span><span class="nt">/&gt;</span>
+              <span class="nt">&lt;BasicPropertyInfo</span> <span class="na">HotelCode=</span><span class="s">"44124248"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/RoomStay&gt;</span>
+          <span class="nt">&lt;/RoomStays&gt;</span>
+          <span class="nt">&lt;ResGuests&gt;</span>
+            <span class="nt">&lt;ResGuest&gt;</span>
+              <span class="nt">&lt;Profiles&gt;</span>
+                <span class="nt">&lt;ProfileInfo&gt;</span>
+                  <span class="nt">&lt;Profile&gt;</span>
+                    <span class="nt">&lt;Customer&gt;</span>
+                      <span class="nt">&lt;Address&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"DEU"</span><span class="nt">/&gt;</span>
+                      <span class="nt">&lt;/Address&gt;</span>
+                    <span class="nt">&lt;/Customer&gt;</span>
+                  <span class="nt">&lt;/Profile&gt;</span>
+                <span class="nt">&lt;/ProfileInfo&gt;</span>
+              <span class="nt">&lt;/Profiles&gt;</span>
+            <span class="nt">&lt;/ResGuest&gt;</span>
+          <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
+      <span class="nt">&lt;/HotelReservations&gt;</span>
+    <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
+  <span class="nt">&lt;/Body&gt;</span>
+<span class="nt">&lt;/Envelope&gt;</span>
+</code></pre>
+<p>This message permits RateManager to be alerted about a group block. We consider a group block to be a large booking (generally more than 10 rooms) that needs to be confirmed by participants and is under a specific expiration policy.</p>
+
+<p>We use the HTNG 2013 specification to define the number of rooms blocked, and already sold. Each message should contain one block (one unique block id) for a single hotel.
+The message processing happens like this:
+1. We cross all room types, for each room type we cross all rate plans applied and save them in memory
+2. We cross all counts of each block and attach them to one room type and one rate plan
+3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</p>
+
+<aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
