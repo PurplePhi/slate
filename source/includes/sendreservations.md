@@ -125,7 +125,7 @@ Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a singl
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e6e6588af220c37af237)
 
-[**Check result in sandbox**](https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f)
+<a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f" target="_blank">**Check result in sandbox**</a>
 
 ### Fields we consider
 
@@ -147,6 +147,6 @@ Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a singl
 | `<RoomRate NumberOfUnits="1">` | `NumberOfUnits` is the number of rooms under the same roomtype and rate plan. |
 | `<Rate>` | One `<Rate>` block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 `<Rate>` blocks.</aside> |
 | `<Rate EffectiveDate="2006-01-12" ExpireDate="2006-01-15">` | Dates to define the time range of the `<Rate>`. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside> |
-| `<Base AmountAfterTax="100.00" CurrencyCode="EUR"/>` | Amount rate for the given rate plan, room type, time period, and its currency (in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)). |
+| `<Base AmountAfterTax="100.00" CurrencyCode="EUR"/>` | Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>). |
 | `<AgeQualifyingCode="10" Count="2">` | This block represents the number of people in the `<RoomStay>`. The `AgeQualifyingCode=10` is the number of adults (in `Count` value), and `AgeQualifyingCode=8` is the number of children. |
 | `<CountryName Code="UK"/>` | The only information we take from guests is their country of origin for segmentation analysis. |

@@ -8,9 +8,9 @@
 https://api.pricematch.travel/htng_message
 ```
 
-Our specification is based on the [HTNG 2013B](https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip) specification, as created by the [Hotel Technology Next Generation Association](http://www.htng.org/). All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.
+Our specification is based on the [HTNG 2013B](https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip) specification, as created by the <a href="http://www.htng.org/" target="_blank">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.
 
-The XML messages that will be sent and received are to be written in [SOAP Message structure](https://www.tutorialspoint.com/soap/soap_message_structure.htm). We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:
+The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm" target="_blank">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:
 
 From PMS to BookingSuite RateManager (1-Way Connection):
 
