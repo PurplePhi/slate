@@ -30,7 +30,7 @@
 <blockquote>
 <p>Authentication</p>
 </blockquote>
-<pre class="highlight xml"><code><span class="nt">&lt;Header&gt;</span>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;Header&gt;</span>
   <span class="nt">&lt;Security</span> <span class="na">mustUnderstand=</span><span class="s">"true"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;UsertextToken&gt;</span>
       <span class="nt">&lt;Username&gt;</span>username_goes_here<span class="nt">&lt;/Username&gt;</span>

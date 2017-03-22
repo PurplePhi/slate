@@ -3,7 +3,7 @@
 <blockquote>
 <p>Request body from RateManager to provider - POST url provided by you</p>
 </blockquote>
-<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
@@ -49,7 +49,7 @@
 <blockquote>
 <p>GET https://api.pricematch.travel/retrieve_responses?hotel_code=hotelcode&amp;username=user&amp;password=pass</p>
 </blockquote>
-<pre class="highlight xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://www.w3.org/2003/05/soap-envelope"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;soap:Header</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">xmlns:htng=</span><span class="s">"http://htng.org/PWSWG/2007/02/AsyncHeaders"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;wsa:MessageID&gt;</span>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b<span class="nt">&lt;/wsa:MessageID&gt;</span>
