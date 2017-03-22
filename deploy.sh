@@ -17,8 +17,6 @@ Options:
                            commit's message.
 "
 
-bundle exec middleman build --clean
-
 parse_args() {
   # Set args from a local environment file.
   if [ -e ".env" ]; then
@@ -60,8 +58,13 @@ parse_args() {
   default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
   default_email=${GIT_DEPLOY_EMAIL:-}
 
+  if [ -z "$1" ]; then
+    echo "Aborted: please specify the git remote to push the '$deploy_branch' branch to." >&2
+    echo "Example: $0 origin" >&2
+    exit 1
+  fi
   #repository to deploy to. must be readable and writable.
-  repo=origin
+  repo="$1"
 
   #append commit hash to the end of message by default
   append_hash=${GIT_DEPLOY_APPEND_HASH:-true}
@@ -69,6 +72,8 @@ parse_args() {
 
 main() {
   parse_args "$@"
+
+  bundle exec middleman build --clean
 
   enable_expanded_output
 
