@@ -2,6 +2,8 @@
 title: BookingSuite RateManager Specifications
 
 language_tabs:
+- xml--right: right
+- xml--wrong: wrong
 
 toc_footers:
 
