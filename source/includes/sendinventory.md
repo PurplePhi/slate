@@ -1,26 +1,27 @@
 ## Send Inventory
 
-> Example inventory message
-
 ```xml
 <?xml version="1.0"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
   <soap:Header>
-    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soap:mustUnderstand="1">
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
       <wsse:UsertextToken>
-        <wsse:Username>usertext</wsse:Username>
-        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-usertext-token-profile-1.0#PasswordText">password</wsse:Password>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
       </wsse:UsertextToken>
     </wsse:Security>
-    <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
-    <wsa:CorrelationID>9e0205ce-e16b-4131-a44e-d2765cf76a76</wsa:CorrelationID>
+    <wsa:MessageID>unique-message-id</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <soap:Body>
     <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
-      <Inventories HotelCode="HXCAIZZ">
+      <Inventories HotelCode="45121140">
         <Inventory>
-          <StatusApplicationControl Start="2015-09-01" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="15"/>
@@ -32,7 +33,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2015-09-01" InvTypeCode="DBL"/>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="10"/>
@@ -44,7 +45,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2015-09-02" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="10"/>
@@ -56,7 +57,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2015-09-02" InvTypeCode="DBL"/>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="5"/>

@@ -1,25 +1,26 @@
 ## Send Reservations
 
-> Request body
-
-```xml--right
+```xml--create
 <?xml version="1.0"?>
-<Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
-  <soap:Header xmlns:htnga="http://htng.org/PWSWG/2007/02/AsyncHeaders" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wss="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-    <wss:Security mustUnderstand="1">
-      <wss:UsertextToken>
-        <wss:Username>test</wss:Username>
-        <wss:Password>test</wss:Password>
-      </wss:UsertextToken>
-    </wss:Security>
-    <wsa:MessageID>769479e5-4812-4475-a801-8853c54df24e</wsa:MessageID>
-    <htnga:CorrelationID>769479e5-4812-4475-a801-8853c54df24e</htnga:CorrelationID>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
+      <wsse:UsertextToken>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
+      </wsse:UsertextToken>
+    </wsse:Security>
+    <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <Body>
-    <OTA_HotelResNotifRQ ResStatus="Commit" TimeStamp="2016-06-08T14:55:37Z">
+    <OTA_HotelResNotifRQ ResStatus="Commit" TimeStamp="2017-02-22T14:55:37Z">
       <HotelReservations>
-        <HotelReservation CreateDateTime="2014-06-20T22:41:51.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
           <UniqueID ID="34880"/>
           <POS>
             <Source>
@@ -31,12 +32,12 @@
           <RoomStays>
             <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="Double">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2014-06-24" ExpireDate="2014-06-25" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
                     </Rate>
-                    <Rate EffectiveDate="2014-06-23" ExpireDate="2014-06-24" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-04-02" ExpireDate="2017-04-03" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="49.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
@@ -46,8 +47,7 @@
                 <GuestCount AgeQualifyingCode="10" Count="2"/>
                 <GuestCount AgeQualifyingCode="8" Count="0"/>
               </GuestCounts>
-              <TimeSpan End="2014-06-25" Start="2014-06-23"/>
-              <BasicPropertyInfo HotelCode="44124248"/>
+              <BasicPropertyInfo HotelCode="45121140"/>
             </RoomStay>
           </RoomStays>
           <ResGuests>
@@ -57,7 +57,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="TC"/>
+                        <CountryName Code="CRO"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -66,7 +66,7 @@
             </ResGuest>
           </ResGuests>
         </HotelReservation>
-        <HotelReservation CreateDateTime="2015-06-18T00:00:00.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
           <UniqueID ID="42689"/>
           <POS>
             <Source>
@@ -78,23 +78,22 @@
           <RoomStays>
             <RoomStay MarketCode="Corp" SourceOfBusiness="Special Company">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="SGL">
+                <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="Deluxe">
                   <Rates>
-                    <Rate EffectiveDate="2015-06-25" ExpireDate="2015-06-27" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="55.00" CurrencyCode="EUR"/>
                     </Rate>
-                    <Rate EffectiveDate="2015-06-22" ExpireDate="2015-06-25" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-04-02" ExpireDate="2017-04-03" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="59.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
                 </RoomRate>
               </RoomRates>
               <GuestCounts IsPerRoom="1">
-                <GuestCount AgeQualifyingCode="10" Count="1"/>
+                <GuestCount AgeQualifyingCode="10" Count="2"/>
                 <GuestCount AgeQualifyingCode="8" Count="0"/>
               </GuestCounts>
-              <TimeSpan End="2015-06-25" Start="2015-06-22"/>
-              <BasicPropertyInfo HotelCode="44124248"/>
+              <BasicPropertyInfo HotelCode="45121140"/>
             </RoomStay>
           </RoomStays>
           <ResGuests>
@@ -119,24 +118,27 @@
 </Envelope>
 ```
 
-```xml--wrong
+```xml--modify
 <?xml version="1.0"?>
-<Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
-  <soap:Header xmlns:htnga="http://htng.org/PWSWG/2007/02/AsyncHeaders" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wss="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-    <wss:Security mustUnderstand="1">
-      <wss:UsertextToken>
-        <wss:Username>wrongtest</wss:Username>
-        <wss:Password>test</wss:Password>
-      </wss:UsertextToken>
-    </wss:Security>
-    <wsa:MessageID>769479e5-4812-4475-a801-8853c54df24e</wsa:MessageID>
-    <htnga:CorrelationID>769479e5-4812-4475-a801-8853c54df24e</htnga:CorrelationID>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
+      <wsse:UsertextToken>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
+      </wsse:UsertextToken>
+    </wsse:Security>
+    <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <Body>
-    <OTA_HotelResNotifRQ ResStatus="Commit" TimeStamp="2016-06-08T14:55:37Z">
+    <OTA_HotelResNotifRQ ResStatus="Modify" TimeStamp="2017-02-23T09:25:41Z">
       <HotelReservations>
-        <HotelReservation CreateDateTime="2014-06-20T22:41:51.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
           <UniqueID ID="34880"/>
           <POS>
             <Source>
@@ -148,13 +150,10 @@
           <RoomStays>
             <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="Double">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2014-06-24" ExpireDate="2014-06-25" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
-                    </Rate>
-                    <Rate EffectiveDate="2014-06-23" ExpireDate="2014-06-24" RateTimeUnit="Night" UnitMultiplier="1">
-                      <Base AmountAfterTax="49.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
                 </RoomRate>
@@ -163,8 +162,7 @@
                 <GuestCount AgeQualifyingCode="10" Count="2"/>
                 <GuestCount AgeQualifyingCode="8" Count="0"/>
               </GuestCounts>
-              <TimeSpan End="2014-06-25" Start="2014-06-23"/>
-              <BasicPropertyInfo HotelCode="44124248"/>
+              <BasicPropertyInfo HotelCode="45121140"/>
             </RoomStay>
           </RoomStays>
           <ResGuests>
@@ -174,7 +172,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="TC"/>
+                        <CountryName Code="CRO"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -182,36 +180,57 @@
               </Profiles>
             </ResGuest>
           </ResGuests>
-        </HotelReservation>
-        <HotelReservation CreateDateTime="2015-06-18T00:00:00.+03:00" ResStatus="Reserved">
-          <UniqueID ID="42689"/>
+      </HotelReservations>
+    </OTA_HotelResNotifRQ>
+  </Body>
+</Envelope>
+```
+
+```xml--cancel
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
+      <wsse:UsertextToken>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
+      </wsse:UsertextToken>
+    </wsse:Security>
+    <wsa:MessageID>unique_message_ID</wsa:MessageID>
+    <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
+  </soap:Header>
+  <Body>
+    <OTA_HotelResNotifRQ ResStatus="Cancel" TimeStamp="2017-03-15T11:09:33Z">
+      <HotelReservations>
+        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Cancelled">
+          <UniqueID ID="34880"/>
           <POS>
             <Source>
               <BookingChannel>
-                <CompanyName Code="Comp">Company</CompanyName>
+                <CompanyName Code="OTA">WEB</CompanyName>
               </BookingChannel>
             </Source>
           </POS>
           <RoomStays>
-            <RoomStay MarketCode="Corp" SourceOfBusiness="Special Company">
+            <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="SGL">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2015-06-25" ExpireDate="2015-06-27" RateTimeUnit="Night" UnitMultiplier="1">
-                      <Base AmountAfterTax="55.00" CurrencyCode="EUR"/>
-                    </Rate>
-                    <Rate EffectiveDate="2015-06-22" ExpireDate="2015-06-25" RateTimeUnit="Night" UnitMultiplier="1">
-                      <Base AmountAfterTax="59.00" CurrencyCode="EUR"/>
+                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
+                      <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
                 </RoomRate>
               </RoomRates>
-              <GuestCounts IsPerRoom="1">
-                <GuestCount AgeQualifyingCode="10" Count="1"/>
+              <GuestCounts>
+                <GuestCount AgeQualifyingCode="10" Count="2"/>
                 <GuestCount AgeQualifyingCode="8" Count="0"/>
               </GuestCounts>
-              <TimeSpan End="2015-06-25" Start="2015-06-22"/>
-              <BasicPropertyInfo HotelCode="44124248"/>
+              <BasicPropertyInfo HotelCode="45121140"/>
             </RoomStay>
           </RoomStays>
           <ResGuests>
@@ -221,7 +240,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="DEU"/>
+                        <CountryName Code="CRO"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -229,7 +248,6 @@
               </Profiles>
             </ResGuest>
           </ResGuests>
-        </HotelReservation>
       </HotelReservations>
     </OTA_HotelResNotifRQ>
   </Body>
@@ -239,10 +257,6 @@
 This endpoint posts a new reservation creation, modification or cancellation to BookingSuite RateManager. The immediate response is a standard HTTP code (Ack / Nack).
 
 Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a `<HotelReservation>` block, and must be gathered under the same transactional status.
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e6e6588af220c37af237)
-
-<a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f" target="_blank">**Check result in sandbox**</a>
 
 ### Fields we consider
 

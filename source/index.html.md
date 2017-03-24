@@ -2,18 +2,21 @@
 title: BookingSuite RateManager Specifications
 
 language_tabs:
-- xml--right: right
-- xml--wrong: wrong
+- xml--create: Create
+- xml--modify: Modify
+- xml--cancel: Cancel
 
 toc_footers:
 
 includes:
   - conventions
   - developmentprocess
+  - postman
   - webservice
   - gettingstarted
   - sendinventory
   - sendreservations
+  - sendgroupblocks
   - receiverateupdates
   - sandbox
 
