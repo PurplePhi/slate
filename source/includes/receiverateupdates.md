@@ -24,17 +24,17 @@
     </wsse:Security>
   </soap:Header>
   <soap:Body>
-    <OTA_HotelRatePlanNotifRQ TimeStamp="2014-12-05T14:57:29+00:00" Version="6.000" MessageContentCode="8">
+    <OTA_HotelRatePlanNotifRQ TimeStamp="2016-12-05T14:57:29+00:00" Version="6.000" MessageContentCode="8">
       <RatePlans HotelCode="13864">
         <RatePlan RatePlanCode="BAR" RatePlanNotifType="Delta">
           <Rates>
-            <Rate Start="2015-03-05" End="2015-03-05" CurrencyCode="EUR" InvTypeCode="DOUBLE">
+            <Rate Start="2017-03-05" End="2017-03-05" CurrencyCode="EUR" InvTypeCode="DOUBLE">
               <BaseByGuestAmts>
                 <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="153" />
                 <BaseByGuestAmt NumberOfGuests="2" AgeQualifyingCode="10" AmountAfterTax="173" />
               </BaseByGuestAmts>
             </Rate>
-            <Rate Start="2015-03-05" End="2015-03-05" CurrencyCode="EUR" InvTypeCode="KING">
+            <Rate Start="2017-03-05" End="2017-03-05" CurrencyCode="EUR" InvTypeCode="KING">
               <BaseByGuestAmts>
                 <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="163.0" />
               </BaseByGuestAmts>
@@ -71,17 +71,17 @@
     </wsse:Security>
   </soap:Header>
   <soap:Body>
-    <OTA_HotelRatePlanNotifRQ TimeStamp="2014-12-05T14:57:29+00:00" Version="6.000" MessageContentCode="8">
+    <OTA_HotelRatePlanNotifRQ TimeStamp="2016-12-05T14:57:29+00:00" Version="6.000" MessageContentCode="8">
       <RatePlans HotelCode="13864">
         <RatePlan RatePlanCode="BAR" RatePlanNotifType="Delta">
           <Rates>
-            <Rate Start="2015-03-05" End="2015-03-05" CurrencyCode="EUR" InvTypeCode="DOUBLE">
+            <Rate Start="2017-03-05" End="2017-03-05" CurrencyCode="EUR" InvTypeCode="DOUBLE">
               <BaseByGuestAmts>
                 <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="153" />
                 <BaseByGuestAmt NumberOfGuests="2" AgeQualifyingCode="10" AmountAfterTax="173" />
               </BaseByGuestAmts>
             </Rate>
-            <Rate Start="2015-03-05" End="2015-03-05" CurrencyCode="EUR" InvTypeCode="KING">
+            <Rate Start="2017-03-05" End="2017-03-05" CurrencyCode="EUR" InvTypeCode="KING">
               <BaseByGuestAmts>
                 <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="163.0" />
               </BaseByGuestAmts>
@@ -135,7 +135,7 @@ When receiving a rate, you should keep sending another GET request in a loop, un
 | `<wsse:UsernameToken>` | This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside> |
 | `<RatePlans HotelCode="13864">` | The `Hotel Code` variable maps the message to a specific property. This code must be defined by you. |
 | `<RatePlan RatePlanCode="BAR">`| The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR. |
-| `<Rate Start="2015-03-05" End="2015-03-05">` | `Start` and `End` are the date range attributes. Both are inclusive. |
+| `<Rate Start="2017-03-05" End="2017-03-05">` | `Start` and `End` are the date range attributes. Both are inclusive. |
 | `<Rate CurrencyCode="EUR">` | `Currency` is the currency considered for this rate block. |
 | `<Rate InvTypeCode="DOUBLE">` | `InvTypeCode` can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice). |
 | <BaseByGuestAmt NumberOfGuests="1" AmountAfterTax="155"> | `NumberOfGuest` is the number of guests considered for the given amount, rate policy and room type.<br>`AmountAfterTax` is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people. |

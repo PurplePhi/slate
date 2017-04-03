@@ -1,6 +1,6 @@
 ## Send Inventory
 
-```xml
+```xml--create
 <?xml version="1.0"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -50,6 +50,154 @@
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="10"/>
             <InvCount CountType="4" Count="9"/>
+            <InvCount CountType="5" Count="1"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="13"/>
+            <InvCount CountType="2" Count="5"/>
+            <InvCount CountType="4" Count="6"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+      </Inventories>
+    </OTA_HotelInvCountNotifRQ>
+  </soap:Body>
+</soap:Envelope>
+```
+
+```xml--modify
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
+      <wsse:UsertextToken>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
+      </wsse:UsertextToken>
+    </wsse:Security>
+    <wsa:MessageID>unique-message-id</wsa:MessageID>
+    <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
+  </soap:Header>
+  <soap:Body>
+    <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
+      <Inventories HotelCode="45121140">
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="20"/>
+            <InvCount CountType="2" Count="15"/>
+            <InvCount CountType="4" Count="3"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="13"/>
+            <InvCount CountType="2" Count="10"/>
+            <InvCount CountType="4" Count="1"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="20"/>
+            <InvCount CountType="2" Count="11"/>
+            <InvCount CountType="4" Count="8"/>
+            <InvCount CountType="5" Count="1"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="13"/>
+            <InvCount CountType="2" Count="5"/>
+            <InvCount CountType="4" Count="6"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+      </Inventories>
+    </OTA_HotelInvCountNotifRQ>
+  </soap:Body>
+</soap:Envelope>
+```
+
+```xml--cancel
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+      soap:mustUnderstand="1">
+      <wsse:UsertextToken>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
+      </wsse:UsertextToken>
+    </wsse:Security>
+    <wsa:MessageID>unique-message-id</wsa:MessageID>
+    <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
+  </soap:Header>
+  <soap:Body>
+    <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
+      <Inventories HotelCode="45121140">
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="20"/>
+            <InvCount CountType="2" Count="16"/>
+            <InvCount CountType="4" Count="2"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="13"/>
+            <InvCount CountType="2" Count="10"/>
+            <InvCount CountType="4" Count="1"/>
+            <InvCount CountType="5" Count="2"/>
+            <InvCount CountType="3" Count="0"/>
+            <InvCount CountType="6" Count="0"/>
+            <InvCount CountType="8" Count="0"/>
+          </InvCounts>
+        </Inventory>
+        <Inventory>
+          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
+          <InvCounts>
+            <InvCount CountType="1" Count="20"/>
+            <InvCount CountType="2" Count="11"/>
+            <InvCount CountType="4" Count="8"/>
             <InvCount CountType="5" Count="1"/>
             <InvCount CountType="3" Count="0"/>
             <InvCount CountType="6" Count="0"/>
