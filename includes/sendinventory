@@ -1,26 +1,25 @@
 <h2 id="send-inventory">Send Inventory</h2>
-
-<blockquote>
-<p>Example inventory message</p>
-</blockquote>
 <pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
-<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> 
+  <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> 
+  <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> 
+  <span class="na">xmlns:wsa=</span><span class="s">"http://www.w3.org/2005/08/addressing"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;soap:Header&gt;</span>
-    <span class="nt">&lt;wsse:Security</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wsse:Security</span> <span class="na">xmlns:wsse=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"</span> 
+      <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;wsse:UsertextToken&gt;</span>
-        <span class="nt">&lt;wsse:Username&gt;</span>usertext<span class="nt">&lt;/wsse:Username&gt;</span>
-        <span class="nt">&lt;wsse:Password</span> <span class="na">Type=</span><span class="s">"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-usertext-token-profile-1.0#PasswordText"</span><span class="nt">&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>username<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
       <span class="nt">&lt;/wsse:UsertextToken&gt;</span>
     <span class="nt">&lt;/wsse:Security&gt;</span>
-    <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
-    <span class="nt">&lt;wsa:CorrelationID&gt;</span>9e0205ce-e16b-4131-a44e-d2765cf76a76<span class="nt">&lt;/wsa:CorrelationID&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>unique-message-id<span class="nt">&lt;/wsa:MessageID&gt;</span>
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;soap:Body&gt;</span>
     <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"45121140"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
@@ -32,7 +31,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-01"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -44,7 +43,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -56,7 +55,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2015-09-02"</span> <span class="na">InvTypeCode=</span><span class="s">"DBL"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
