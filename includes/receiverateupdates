@@ -24,17 +24,17 @@
     <span class="nt">&lt;/wsse:Security&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;soap:Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2016-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;Rates&gt;</span>
-            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2017-03-05"</span> <span class="na">End=</span><span class="s">"2017-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
               <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
             <span class="nt">&lt;/Rate&gt;</span>
-            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2017-03-05"</span> <span class="na">End=</span><span class="s">"2017-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
               <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
@@ -70,17 +70,17 @@
     <span class="nt">&lt;/wsse:Security&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;soap:Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2014-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;OTA_HotelRatePlanNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2016-12-05T14:57:29+00:00"</span> <span class="na">Version=</span><span class="s">"6.000"</span> <span class="na">MessageContentCode=</span><span class="s">"8"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;RatePlans</span> <span class="na">HotelCode=</span><span class="s">"13864"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RatePlanNotifType=</span><span class="s">"Delta"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;Rates&gt;</span>
-            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2017-03-05"</span> <span class="na">End=</span><span class="s">"2017-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"DOUBLE"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"153"</span> <span class="nt">/&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"173"</span> <span class="nt">/&gt;</span>
               <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
             <span class="nt">&lt;/Rate&gt;</span>
-            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2015-03-05"</span> <span class="na">End=</span><span class="s">"2015-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Rate</span> <span class="na">Start=</span><span class="s">"2017-03-05"</span> <span class="na">End=</span><span class="s">"2017-03-05"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">InvTypeCode=</span><span class="s">"KING"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span> <span class="na">AgeQualifyingCode=</span><span class="s">"10"</span> <span class="na">AmountAfterTax=</span><span class="s">"163.0"</span> <span class="nt">/&gt;</span>
               <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
@@ -155,7 +155,7 @@
 <td>The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate Start=&quot;2015-03-05&quot; End=&quot;2015-03-05&quot;&gt;</code></td>
+<td><code class="prettyprint">&lt;Rate Start=&quot;2017-03-05&quot; End=&quot;2017-03-05&quot;&gt;</code></td>
 <td><code class="prettyprint">Start</code> and <code class="prettyprint">End</code> are the date range attributes. Both are inclusive.</td>
 </tr>
 <tr>

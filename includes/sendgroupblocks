@@ -4,8 +4,8 @@
   <span class="nt">&lt;soap:Header&gt;</span>
     <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;wsse:UsernameToken&gt;</span>
-        <span class="nt">&lt;wsse:Username&gt;</span>UserName<span class="nt">&lt;/wsse:Username&gt;</span>
-        <span class="nt">&lt;wsse:Password&gt;</span>Pass<span class="nt">&lt;/wsse:Password&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>anatest<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>3PtL7Mt7_5jE<span class="nt">&lt;/wsse:Password&gt;</span>
       <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
     <span class="nt">&lt;/wsse:Security&gt;</span>
     <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
@@ -13,62 +13,62 @@
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2015-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2017-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;InvBlocks&gt;</span>
         <span class="nt">&lt;InvBlock</span> <span class="na">InvBlockCode=</span><span class="s">"XMAS13"</span> <span class="na">TransactionAction=</span><span class="s">"Book"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;HotelRef</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">/&gt;</span>
-          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2015-06-01"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2017-06-01"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;RoomTypes&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"25"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span><span class="err">00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"220"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2015-03-02"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2017-03-02"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"110"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
@@ -86,8 +86,8 @@
   <span class="nt">&lt;soap:Header&gt;</span>
     <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;wsse:UsernameToken&gt;</span>
-        <span class="nt">&lt;wsse:Username&gt;</span>UserName<span class="nt">&lt;/wsse:Username&gt;</span>
-        <span class="nt">&lt;wsse:Password&gt;</span>Pass<span class="nt">&lt;/wsse:Password&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>anatest<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>3PtL7Mt7_5jE<span class="nt">&lt;/wsse:Password&gt;</span>
       <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
     <span class="nt">&lt;/wsse:Security&gt;</span>
     <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
@@ -95,62 +95,62 @@
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2015-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2017-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;InvBlocks&gt;</span>
         <span class="nt">&lt;InvBlock</span> <span class="na">InvBlockCode=</span><span class="s">"XMAS13"</span> <span class="na">TransactionAction=</span><span class="s">"Modify"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;HotelRef</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">/&gt;</span>
-          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2015-02-01"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2017-02-01"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;RoomTypes&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"25"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span><span class="err">00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"220"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2015-03-02"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2017-03-02"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"110"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
@@ -168,8 +168,8 @@
   <span class="nt">&lt;soap:Header&gt;</span>
     <span class="nt">&lt;wsse:Security</span> <span class="na">soap:mustUnderstand=</span><span class="s">"1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;wsse:UsernameToken&gt;</span>
-        <span class="nt">&lt;wsse:Username&gt;</span>UserName<span class="nt">&lt;/wsse:Username&gt;</span>
-        <span class="nt">&lt;wsse:Password&gt;</span>Pass<span class="nt">&lt;/wsse:Password&gt;</span>
+        <span class="nt">&lt;wsse:Username&gt;</span>anatest<span class="nt">&lt;/wsse:Username&gt;</span>
+        <span class="nt">&lt;wsse:Password&gt;</span>3PtL7Mt7_5jE<span class="nt">&lt;/wsse:Password&gt;</span>
       <span class="nt">&lt;/wsse:UsernameToken&gt;</span>
     <span class="nt">&lt;/wsse:Security&gt;</span>
     <span class="nt">&lt;wsa:MessageID&gt;</span>8ee65699-8b8b-8427-2822-687da8b55a89<span class="nt">&lt;/wsa:MessageID&gt;</span>
@@ -177,62 +177,62 @@
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2015-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;OTA_HotelInvBlockNotifRQ</span> <span class="na">TimeStamp=</span><span class="s">"2017-05-04T15:35:31.953125+07:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;InvBlocks&gt;</span>
         <span class="nt">&lt;InvBlock</span> <span class="na">InvBlockCode=</span><span class="s">"XMAS13"</span> <span class="na">TransactionAction=</span><span class="s">"Cancel"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;HotelRef</span> <span class="na">HotelCode=</span><span class="s">"HXCAIZZ"</span><span class="nt">/&gt;</span>
-          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2015-02-01"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;InvBlockDates</span> <span class="na">AbsoluteCutoff=</span><span class="s">"2017-02-01"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;RoomTypes&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">RoomTypeCode=</span><span class="s">"C2T"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-01"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"25"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span><span class="err">00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"105.00"</span> <span class="na">NumberOfGuests=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span> <span class="na">NumberOfUnits=</span><span class="s">"5"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"90"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">RoomTypeCode=</span><span class="s">"KGB"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"2"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations</span> <span class="na">RoomTypePickUpStatus=</span><span class="s">"4"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-03"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-03"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-03"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
                 <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">NumberOfUnits=</span><span class="s">"3"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP1"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
-                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span><span class="err">"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"95"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
               <span class="nt">&lt;/RatePlans&gt;</span>
             <span class="nt">&lt;/RoomType&gt;</span>
-            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;RoomType</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">RoomTypeCode=</span><span class="s">"TWB"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomTypeAllocations&gt;</span>
-                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;RoomTypeAllocation</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">/&gt;</span>
               <span class="nt">&lt;/RoomTypeAllocations&gt;</span>
               <span class="nt">&lt;RatePlans&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2015-03-01"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-02"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP2"</span> <span class="na">Start=</span><span class="s">"2017-03-01"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"220"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
                 <span class="nt">&lt;/RatePlan&gt;</span>
-                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2015-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2015-03-02"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RatePlan</span> <span class="na">CurrencyCode=</span><span class="s">"IDR"</span> <span class="na">End=</span><span class="s">"2017-03-04"</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"GROUP3"</span> <span class="na">Start=</span><span class="s">"2017-03-02"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;BaseByGuestAmts&gt;</span>
                     <span class="nt">&lt;BaseByGuestAmt</span> <span class="na">AmountAfterTax=</span><span class="s">"110"</span> <span class="na">NumberOfGuests=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
                   <span class="nt">&lt;/BaseByGuestAmts&gt;</span>
