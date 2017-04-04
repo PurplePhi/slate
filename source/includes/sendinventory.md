@@ -14,14 +14,14 @@
         <wsse:Password>password</wsse:Password>
       </wsse:UsertextToken>
     </wsse:Security>
-    <wsa:MessageID>unique-message-id</wsa:MessageID>
+    <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <soap:Body>
     <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
       <Inventories HotelCode="45121140">
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="15"/>
@@ -33,7 +33,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="10"/>
@@ -45,7 +45,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="10"/>
@@ -57,7 +57,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="5"/>
@@ -95,7 +95,7 @@
     <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
       <Inventories HotelCode="45121140">
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="15"/>
@@ -107,7 +107,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="10"/>
@@ -119,7 +119,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="11"/>
@@ -131,7 +131,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="5"/>
@@ -169,7 +169,7 @@
     <OTA_HotelInvCountNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05">
       <Inventories HotelCode="45121140">
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="16"/>
@@ -181,7 +181,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-01" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-01" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="10"/>
@@ -193,7 +193,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="King"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="King"/>
           <InvCounts>
             <InvCount CountType="1" Count="20"/>
             <InvCount CountType="2" Count="11"/>
@@ -205,7 +205,7 @@
           </InvCounts>
         </Inventory>
         <Inventory>
-          <StatusApplicationControl Start="2017-04-02" InvTypeCode="Deluxe"/>
+          <StatusApplicationControl Start="2017-05-02" InvTypeCode="Deluxe"/>
           <InvCounts>
             <InvCount CountType="1" Count="13"/>
             <InvCount CountType="2" Count="5"/>

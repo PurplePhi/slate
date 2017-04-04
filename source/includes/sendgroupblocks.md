@@ -2,28 +2,30 @@
 
 ```xml--create
 <?xml version="1.0"?>
-<Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+xmlns:wsa="http://www.w3.org/2005/08/addressing" 
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
   <soap:Header>
     <wsse:Security soap:mustUnderstand="1">
       <wsse:UsernameToken>
-        <wsse:Username>anatest</wsse:Username>
-        <wsse:Password>3PtL7Mt7_5jE</wsse:Password>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
     <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-04T15:35:31.953125+07:00">
+  <soap:Body>
+    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-04T14:03:10+01:00">
       <InvBlocks>
-        <InvBlock InvBlockCode="XMAS13" TransactionAction="Book">
-          <HotelRef HotelCode="HXCAIZZ"/>
-          <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-03-04" Start="2017-03-01"/>
+        <InvBlock InvBlockCode="FANCY_CONGRESS" TransactionAction="Book">
+          <HotelRef HotelCode="45121140"/>
+          <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-03-01" RoomTypeCode="C2T" Start="2017-03-01">
+            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-01" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
@@ -33,9 +35,9 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="KGB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="5" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
@@ -45,12 +47,12 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-03" RoomTypeCode="KGB" Start="2017-03-03">
+            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="3" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="1" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
@@ -60,17 +62,17 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="TWB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-03-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-03-01">
+                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-03-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-03-02">
+                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
@@ -81,34 +83,36 @@
         </InvBlock>
       </InvBlocks>
     </OTA_HotelInvBlockNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 ```xml--modify
 <?xml version="1.0"?>
-<Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+xmlns:wsa="http://www.w3.org/2005/08/addressing" 
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
   <soap:Header>
     <wsse:Security soap:mustUnderstand="1">
       <wsse:UsernameToken>
-        <wsse:Username>anatest</wsse:Username>
-        <wsse:Password>3PtL7Mt7_5jE</wsse:Password>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
     <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-04T15:35:31.953125+07:00">
+  <soap:Body>
+    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-06T12:48:23+01:00">
       <InvBlocks>
-        <InvBlock InvBlockCode="XMAS13" TransactionAction="Modify">
-          <HotelRef HotelCode="HXCAIZZ"/>
-          <InvBlockDates AbsoluteCutoff="2017-02-01" End="2017-03-04" Start="2017-03-01"/>
+        <InvBlock InvBlockCode="FANCY_CONGRESS" TransactionAction="Modify">
+          <HotelRef HotelCode="45121140"/>
+          <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-03-01" RoomTypeCode="C2T" Start="2017-03-01">
+            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-01" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
@@ -118,9 +122,9 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="KGB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="5" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
@@ -130,12 +134,12 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-03" RoomTypeCode="KGB" Start="2017-03-03">
+            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="3" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="1" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
@@ -145,17 +149,17 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="TWB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-03-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-03-01">
+                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-03-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-03-02">
+                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
@@ -166,34 +170,36 @@
         </InvBlock>
       </InvBlocks>
     </OTA_HotelInvBlockNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 ```xml--cancel
 <?xml version="1.0"?>
-<Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+xmlns:wsa="http://www.w3.org/2005/08/addressing" 
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
   <soap:Header>
     <wsse:Security soap:mustUnderstand="1">
       <wsse:UsernameToken>
-        <wsse:Username>anatest</wsse:Username>
-        <wsse:Password>3PtL7Mt7_5jE</wsse:Password>
+        <wsse:Username>username</wsse:Username>
+        <wsse:Password>password</wsse:Password>
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
     <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-04T15:35:31.953125+07:00">
+  <soap:Body>
+    <OTA_HotelInvBlockNotifRQ TimeStamp="2017-05-07T16:08:13+01:00">
       <InvBlocks>
-        <InvBlock InvBlockCode="XMAS13" TransactionAction="Cancel">
-          <HotelRef HotelCode="HXCAIZZ"/>
-          <InvBlockDates AbsoluteCutoff="2017-02-01" End="2017-03-04" Start="2017-03-01"/>
+        <InvBlock InvBlockCode="FANCY_CONGRESS" TransactionAction="Cancel">
+          <HotelRef HotelCode="45121140"/>
+          <InvBlockDates AbsoluteCutoff="2017-05-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-03-01" RoomTypeCode="C2T" Start="2017-03-01">
+            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-01" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
@@ -203,9 +209,9 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="KGB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="5" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
@@ -215,12 +221,12 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-03" RoomTypeCode="KGB" Start="2017-03-03">
+            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="3" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-03-03" NumberOfUnits="1" Start="2017-03-03"/>
+                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
               </RoomTypeAllocations>
               <RatePlans>
                 <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
@@ -230,17 +236,17 @@
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-03-04" RoomTypeCode="TWB" Start="2017-03-01">
+            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-03-04" NumberOfUnits="1" Start="2017-03-01"/>
+                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-03-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-03-01">
+                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-03-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-03-02">
+                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
                   <BaseByGuestAmts>
                     <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
@@ -251,8 +257,8 @@
         </InvBlock>
       </InvBlocks>
     </OTA_HotelInvBlockNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 This message permits RateManager to be alerted about a group block. We consider a group block to be a large booking (generally more than 10 rooms) that needs to be confirmed by participants and is under a specific expiration policy.

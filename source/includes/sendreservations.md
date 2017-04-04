@@ -17,10 +17,10 @@
     <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelResNotifRQ ResStatus="Commit" TimeStamp="2017-02-22T14:55:37Z">
+  <soap:Body>
+    <OTA_HotelResNotifRQ ResStatus="Commit" TimeStamp="2017-04-04T10:01:29+01:00">
       <HotelReservations>
-        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-04-04T10:00:15+01:00" ResStatus="Reserved">
           <UniqueID ID="34880"/>
           <POS>
             <Source>
@@ -34,10 +34,10 @@
               <RoomRates>
                 <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
                     </Rate>
-                    <Rate EffectiveDate="2017-04-02" ExpireDate="2017-04-03" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-02" ExpireDate="2017-05-03" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="49.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
@@ -57,7 +57,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="CRO"/>
+                        <CountryName Code="UK"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -66,7 +66,7 @@
             </ResGuest>
           </ResGuests>
         </HotelReservation>
-        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-04-15T10:00:13+01:00" ResStatus="Reserved">
           <UniqueID ID="42689"/>
           <POS>
             <Source>
@@ -80,10 +80,10 @@
               <RoomRates>
                 <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="Deluxe">
                   <Rates>
-                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="55.00" CurrencyCode="EUR"/>
                     </Rate>
-                    <Rate EffectiveDate="2017-04-02" ExpireDate="2017-04-03" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-02" ExpireDate="2017-05-03" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="59.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
@@ -103,7 +103,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="DEU"/>
+                        <CountryName Code="DE"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -114,8 +114,8 @@
         </HotelReservation>
       </HotelReservations>
     </OTA_HotelResNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 ```xml--modify
@@ -135,10 +135,10 @@
     <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelResNotifRQ ResStatus="Modify" TimeStamp="2017-02-23T09:25:41Z">
+  <soap:Body>
+    <OTA_HotelResNotifRQ ResStatus="Modify" TimeStamp="2017-04-05T12:09:33+01:00">
       <HotelReservations>
-        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Reserved">
+        <HotelReservation CreateDateTime="2017-04-04T10:00:15+01:00" ResStatus="Reserved">
           <UniqueID ID="34880"/>
           <POS>
             <Source>
@@ -152,7 +152,7 @@
               <RoomRates>
                 <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
@@ -172,7 +172,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="CRO"/>
+                        <CountryName Code="UK"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -180,10 +180,11 @@
               </Profiles>
             </ResGuest>
           </ResGuests>
+        </HotelReservation>
       </HotelReservations>
     </OTA_HotelResNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 ```xml--cancel
@@ -203,10 +204,10 @@
     <wsa:MessageID>unique_message_ID</wsa:MessageID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
-  <Body>
-    <OTA_HotelResNotifRQ ResStatus="Cancel" TimeStamp="2017-03-15T11:09:33Z">
+  <soap:Body>
+    <OTA_HotelResNotifRQ ResStatus="Cancel" TimeStamp="2017-04-06T09:23:48+01:00">
       <HotelReservations>
-        <HotelReservation CreateDateTime="2017-02-22T08:41:51.+03:00" ResStatus="Cancelled">
+        <HotelReservation CreateDateTime="2017-04-04T10:00:15+01:00" ResStatus="Cancelled">
           <UniqueID ID="34880"/>
           <POS>
             <Source>
@@ -220,7 +221,7 @@
               <RoomRates>
                 <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
                   <Rates>
-                    <Rate EffectiveDate="2017-04-01" ExpireDate="2017-04-02" RateTimeUnit="Night" UnitMultiplier="1">
+                    <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
                     </Rate>
                   </Rates>
@@ -240,7 +241,7 @@
                   <Profile>
                     <Customer>
                       <Address>
-                        <CountryName Code="CRO"/>
+                        <CountryName Code="UK"/>
                       </Address>
                     </Customer>
                   </Profile>
@@ -248,10 +249,11 @@
               </Profiles>
             </ResGuest>
           </ResGuests>
+        </HotelReservation>
       </HotelReservations>
     </OTA_HotelResNotifRQ>
-  </Body>
-</Envelope>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 This endpoint posts a new reservation creation, modification or cancellation to BookingSuite RateManager. The immediate response is a standard HTTP code (Ack / Nack).
