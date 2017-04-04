@@ -12,14 +12,14 @@
         <span class="nt">&lt;wsse:Password&gt;</span>password<span class="nt">&lt;/wsse:Password&gt;</span>
       <span class="nt">&lt;/wsse:UsertextToken&gt;</span>
     <span class="nt">&lt;/wsse:Security&gt;</span>
-    <span class="nt">&lt;wsa:MessageID&gt;</span>unique-message-id<span class="nt">&lt;/wsa:MessageID&gt;</span>
+    <span class="nt">&lt;wsa:MessageID&gt;</span>unique_message_ID<span class="nt">&lt;/wsa:MessageID&gt;</span>
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
   <span class="nt">&lt;soap:Body&gt;</span>
     <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"45121140"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
@@ -31,7 +31,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -43,7 +43,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -55,7 +55,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
@@ -90,7 +90,7 @@
     <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"45121140"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
@@ -102,7 +102,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -114,7 +114,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"11"</span><span class="nt">/&gt;</span>
@@ -126,7 +126,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
@@ -161,7 +161,7 @@
     <span class="nt">&lt;OTA_HotelInvCountNotifRQ</span> <span class="na">xmlns=</span><span class="s">"http://www.opentravel.org/OTA/2003/05"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Inventories</span> <span class="na">HotelCode=</span><span class="s">"45121140"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"16"</span><span class="nt">/&gt;</span>
@@ -173,7 +173,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-01"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"10"</span><span class="nt">/&gt;</span>
@@ -185,7 +185,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"King"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"11"</span><span class="nt">/&gt;</span>
@@ -197,7 +197,7 @@
           <span class="nt">&lt;/InvCounts&gt;</span>
         <span class="nt">&lt;/Inventory&gt;</span>
         <span class="nt">&lt;Inventory&gt;</span>
-          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-04-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;StatusApplicationControl</span> <span class="na">Start=</span><span class="s">"2017-05-02"</span> <span class="na">InvTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;InvCounts&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"1"</span> <span class="na">Count=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;InvCount</span> <span class="na">CountType=</span><span class="s">"2"</span> <span class="na">Count=</span><span class="s">"5"</span><span class="nt">/&gt;</span>

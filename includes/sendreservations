@@ -15,10 +15,10 @@
     <span class="nt">&lt;wsa:MessageID&gt;</span>unique_message_ID<span class="nt">&lt;/wsa:MessageID&gt;</span>
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
-  <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Commit"</span> <span class="na">TimeStamp=</span><span class="s">"2017-02-22T14:55:37Z"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Commit"</span> <span class="na">TimeStamp=</span><span class="s">"2017-04-04T10:01:29+01:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;HotelReservations&gt;</span>
-        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-02-22T08:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-04-04T10:00:15+01:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;POS&gt;</span>
             <span class="nt">&lt;Source&gt;</span>
@@ -32,10 +32,10 @@
               <span class="nt">&lt;RoomRates&gt;</span>
                 <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-02"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-03"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-02"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-03"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"49.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
                   <span class="nt">&lt;/Rates&gt;</span>
@@ -55,7 +55,7 @@
                   <span class="nt">&lt;Profile&gt;</span>
                     <span class="nt">&lt;Customer&gt;</span>
                       <span class="nt">&lt;Address&gt;</span>
-                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"CRO"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"UK"</span><span class="nt">/&gt;</span>
                       <span class="nt">&lt;/Address&gt;</span>
                     <span class="nt">&lt;/Customer&gt;</span>
                   <span class="nt">&lt;/Profile&gt;</span>
@@ -64,7 +64,7 @@
             <span class="nt">&lt;/ResGuest&gt;</span>
           <span class="nt">&lt;/ResGuests&gt;</span>
         <span class="nt">&lt;/HotelReservation&gt;</span>
-        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-02-22T08:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-04-15T10:00:13+01:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"42689"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;POS&gt;</span>
             <span class="nt">&lt;Source&gt;</span>
@@ -78,10 +78,10 @@
               <span class="nt">&lt;RoomRates&gt;</span>
                 <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"55.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-02"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-03"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-02"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-03"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"59.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
                   <span class="nt">&lt;/Rates&gt;</span>
@@ -101,7 +101,7 @@
                   <span class="nt">&lt;Profile&gt;</span>
                     <span class="nt">&lt;Customer&gt;</span>
                       <span class="nt">&lt;Address&gt;</span>
-                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"DEU"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"DE"</span><span class="nt">/&gt;</span>
                       <span class="nt">&lt;/Address&gt;</span>
                     <span class="nt">&lt;/Customer&gt;</span>
                   <span class="nt">&lt;/Profile&gt;</span>
@@ -112,8 +112,8 @@
         <span class="nt">&lt;/HotelReservation&gt;</span>
       <span class="nt">&lt;/HotelReservations&gt;</span>
     <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
-  <span class="nt">&lt;/Body&gt;</span>
-<span class="nt">&lt;/Envelope&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
 </code></pre><pre class="highlight xml tab-xml--modify"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> 
   <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> 
@@ -130,10 +130,10 @@
     <span class="nt">&lt;wsa:MessageID&gt;</span>unique_message_ID<span class="nt">&lt;/wsa:MessageID&gt;</span>
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
-  <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Modify"</span> <span class="na">TimeStamp=</span><span class="s">"2017-02-23T09:25:41Z"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Modify"</span> <span class="na">TimeStamp=</span><span class="s">"2017-04-05T12:09:33+01:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;HotelReservations&gt;</span>
-        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-02-22T08:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-04-04T10:00:15+01:00"</span> <span class="na">ResStatus=</span><span class="s">"Reserved"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;POS&gt;</span>
             <span class="nt">&lt;Source&gt;</span>
@@ -147,7 +147,7 @@
               <span class="nt">&lt;RoomRates&gt;</span>
                 <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
                   <span class="nt">&lt;/Rates&gt;</span>
@@ -167,7 +167,7 @@
                   <span class="nt">&lt;Profile&gt;</span>
                     <span class="nt">&lt;Customer&gt;</span>
                       <span class="nt">&lt;Address&gt;</span>
-                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"CRO"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"UK"</span><span class="nt">/&gt;</span>
                       <span class="nt">&lt;/Address&gt;</span>
                     <span class="nt">&lt;/Customer&gt;</span>
                   <span class="nt">&lt;/Profile&gt;</span>
@@ -175,10 +175,11 @@
               <span class="nt">&lt;/Profiles&gt;</span>
             <span class="nt">&lt;/ResGuest&gt;</span>
           <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
       <span class="nt">&lt;/HotelReservations&gt;</span>
     <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
-  <span class="nt">&lt;/Body&gt;</span>
-<span class="nt">&lt;/Envelope&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
 </code></pre><pre class="highlight xml tab-xml--cancel"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="nt">&lt;soap:Envelope</span> <span class="na">xmlns:soap=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> 
   <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span> 
@@ -195,10 +196,10 @@
     <span class="nt">&lt;wsa:MessageID&gt;</span>unique_message_ID<span class="nt">&lt;/wsa:MessageID&gt;</span>
     <span class="nt">&lt;wsa:To&gt;</span>https://api.pricematch.travel/htng_message<span class="nt">&lt;/wsa:To&gt;</span>
   <span class="nt">&lt;/soap:Header&gt;</span>
-  <span class="nt">&lt;Body&gt;</span>
-    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Cancel"</span> <span class="na">TimeStamp=</span><span class="s">"2017-03-15T11:09:33Z"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;soap:Body&gt;</span>
+    <span class="nt">&lt;OTA_HotelResNotifRQ</span> <span class="na">ResStatus=</span><span class="s">"Cancel"</span> <span class="na">TimeStamp=</span><span class="s">"2017-04-06T09:23:48+01:00"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;HotelReservations&gt;</span>
-        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-02-22T08:41:51.+03:00"</span> <span class="na">ResStatus=</span><span class="s">"Cancelled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;HotelReservation</span> <span class="na">CreateDateTime=</span><span class="s">"2017-04-04T10:00:15+01:00"</span> <span class="na">ResStatus=</span><span class="s">"Cancelled"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;UniqueID</span> <span class="na">ID=</span><span class="s">"34880"</span><span class="nt">/&gt;</span>
           <span class="nt">&lt;POS&gt;</span>
             <span class="nt">&lt;Source&gt;</span>
@@ -212,7 +213,7 @@
               <span class="nt">&lt;RoomRates&gt;</span>
                 <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
-                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-04-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-04-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
                     <span class="nt">&lt;/Rate&gt;</span>
                   <span class="nt">&lt;/Rates&gt;</span>
@@ -232,7 +233,7 @@
                   <span class="nt">&lt;Profile&gt;</span>
                     <span class="nt">&lt;Customer&gt;</span>
                       <span class="nt">&lt;Address&gt;</span>
-                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"CRO"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;CountryName</span> <span class="na">Code=</span><span class="s">"UK"</span><span class="nt">/&gt;</span>
                       <span class="nt">&lt;/Address&gt;</span>
                     <span class="nt">&lt;/Customer&gt;</span>
                   <span class="nt">&lt;/Profile&gt;</span>
@@ -240,10 +241,11 @@
               <span class="nt">&lt;/Profiles&gt;</span>
             <span class="nt">&lt;/ResGuest&gt;</span>
           <span class="nt">&lt;/ResGuests&gt;</span>
+        <span class="nt">&lt;/HotelReservation&gt;</span>
       <span class="nt">&lt;/HotelReservations&gt;</span>
     <span class="nt">&lt;/OTA_HotelResNotifRQ&gt;</span>
-  <span class="nt">&lt;/Body&gt;</span>
-<span class="nt">&lt;/Envelope&gt;</span>
+  <span class="nt">&lt;/soap:Body&gt;</span>
+<span class="nt">&lt;/soap:Envelope&gt;</span>
 </code></pre>
 <p>This endpoint posts a new reservation creation, modification or cancellation to BookingSuite RateManager. The immediate response is a standard HTTP code (Ack / Nack).</p>
 
