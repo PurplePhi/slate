@@ -4,13 +4,13 @@
 
 We define connectivity as 1-way or 2-way.
 
-1-way refers solely to data transfer from your PMS to RateManager. This means that we will only be able to receive data from your system. It looks something like this:
+1-way refers solely to data transfer from your PMS to RateManager. This means that we will only be able to receive data from your system.
 
-![diagram](/images/connectivity_1way.jpg)
+2-way refers to data transfer from your PMS to RateManager, and RateManager rate updates back to your PMS.
 
-2-way refers to data transfer from your PMS to RateManager, and RateManager rate updates back to your PMS. It looks something like this:
+![diagram](/images/interface_ways.PNG)
 
-![diagram](/images/connectivity_2way.jpg)
+
 
 ### Reservation data
 
@@ -26,14 +26,18 @@ The most basic functions of our RateManager product are dependent on computing t
 
 However, in addition to this core data, RateManager can also analyze additional segmentation data to provide more nuanced recommendations. By providing all information requested in this specification, we can provide the maximum benefits of RateManager to our mutual customers. 
 
-### Property set-up process
+## Property set-up process
 
 Once the interface has been completed between RateManager and your PMS, we will be using a standardized process to set-up RateManager for new properties.
 
 It is important to understand that we use a property’s historical data to train our algorithm for that specific property. To this end, for each property set-up, a complete history of 2 years will be requested from you. This historical data will only be requested once, at the beginning of set-up. Afterwards, we will only need to update new data as it comes in.
 
-The property set-up process will usually be the following:
+### Property setup:
 
 1. Make the necessary configurations, depending of the methods and conventions used (hotel code mapping, FTP access, username and password set-up)
-2. PMS sends the property’s historical data of the last 2 years to RateManager
-3. PMS sends current data to RateManager, then activates live synchronization
+2. PMS sends all reservations with check-out date <= Today (2 years of history is required)
+3. PMS sends all reservations with check-out date > Today (current and future data)
+4. PMS sends inventory for all room types, 365 days into the future (including Today)
+5. PMS activates live updates for new changes to reservations and inventory
+
+<aside class="notice">This process can be done manually or be automated.</aside>
