@@ -260,7 +260,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code class="prettyprint">&lt;OTA_ResNotifRQ ResStatus=”Commit”/&gt;</code></td>
+<td><code class="prettyprint">OTA_ResNotifRQ</code><br><code class="prettyprint">ResStatus</code></td>
 <td>Transactional status of the reservation. It can be:<br>- &lsquo;Commit&rsquo; (creates a new reservation)<br>- &lsquo;Modify&rsquo; (updates an existing reservation)<br>- &lsquo;Cancel&rsquo; (cancels a reservation)</td>
 </tr>
 <tr>
@@ -268,71 +268,71 @@
 <td>Reservation block. We accept up to 1000 blocks.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;HotelReservation CreateDateTime=&quot;2005-10-09T08:51:45 UTC&quot;&gt;</code></td>
-<td>This is what we consider as the booking date. Please ensure the timezone matches that of the property.</td>
+<td><code class="prettyprint">CreateDateTime</code></td>
+<td>This is what we consider as the booking date. Please ensure the timezone matches that of the property. Format 2016-10-09T08:51:45 UTC</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;HotelReservation ResStatus=&quot;Reserved&quot;&gt;</code></td>
-<td>Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation)</td>
+<td><code class="prettyprint">HotelReservation</code><br><code class="prettyprint">ResStatus</code></td>
+<td>Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation)<br> <aside class="warning">Not to be confused with <code class="prettyprint">OTA_ResNotifRQ ResStatus</code></aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;UniqueID ID=&quot;3741&quot;/&gt;</code></td>
+<td><code class="prettyprint">UniqueID</code></td>
 <td>Unique reservation ID of the reservation that will permit us to link your message to the reservation in our database.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;BasicPropertyInfo HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
-<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you</td>
+<td><code class="prettyprint">HotelCode</code></td>
+<td>Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;CompanyName Code=&quot;OTA&quot;&gt;WEB&lt;/CompanyName&gt;</code></td>
+<td><code class="prettyprint">CompanyName</code></td>
 <td>We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL).</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomStay&gt;</code></td>
+<td><code class="prettyprint">RoomStay</code></td>
 <td>One <code class="prettyprint">&lt;Roomstay&gt;</code> block is one room booked for the given reservation.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomStay MarketCode:&quot;CORP&quot;&gt;</code></td>
+<td><code class="prettyprint">MarketCode</code></td>
 <td><code class="prettyprint">MarketCode</code> is the intent of the stay, and what we take as segmentation data (leisure, corporate, etc).</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomStay SourceOfBusiness=&quot;Booking.com&quot;&gt;</code></td>
+<td><code class="prettyprint">SourceOfBusiness</code></td>
 <td><code class="prettyprint">SourceOfBusiness</code> is what we take as the agency.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomRate&gt;</code></td>
+<td><code class="prettyprint">RoomRate</code></td>
 <td>One <code class="prettyprint">&lt;RoomRate&gt;</code> block represents one rate for one rate plan and one room type.<aside class="notice">If the booking has 2 different room types, there will be at least 2 <code class="prettyprint">RoomRate</code> blocks. If a booking has one room type, with 2 nights with a different rate plan, there will be 2 <code class="prettyprint">RoomRate</code> blocks.</aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomRate RoomTypeCode=&quot;KING”&gt;</code></td>
-<td><code class="prettyprint">RoomTypeCode</code> is the room type. It must match the <code class="prettyprint">InvTypeCode</code> in inventory messages.</td>
+<td><code class="prettyprint">RoomTypeCode</code></td>
+<td>Room type. It must match the <code class="prettyprint">InvTypeCode</code> in inventory messages.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomRate RatePlanCode=&quot;RACK&quot;&gt;</code></td>
-<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+<td><code class="prettyprint">RatePlanCode</code></td>
+<td>Rate plan used for this reservation</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RoomRate NumberOfUnits=&quot;1&quot;&gt;</code></td>
-<td><code class="prettyprint">NumberOfUnits</code> is the number of rooms under the same roomtype and rate plan.</td>
+<td><code class="prettyprint">NumberOfUnits</code></td>
+<td>Number of rooms under the same roomtype and rate plan.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate&gt;</code></td>
+<td><code class="prettyprint">Rate</code></td>
 <td>One <code class="prettyprint">&lt;Rate&gt;</code> block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 <code class="prettyprint">&lt;Rate&gt;</code> blocks.</aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate EffectiveDate=&quot;2006-01-12&quot; ExpireDate=&quot;2006-01-15&quot;&gt;</code></td>
+<td><code class="prettyprint">EffectiveDate</code><br><code class="prettyprint">ExpireDate</code></td>
 <td>Dates to define the time range of the <code class="prettyprint">&lt;Rate&gt;</code>. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Base AmountAfterTax=&quot;100.00&quot; CurrencyCode=&quot;EUR&quot;/&gt;</code></td>
-<td>Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>).</td>
+<td><code class="prettyprint">AmountAfterTax</code><br><code class="prettyprint">CurrencyCode</code></td>
+<td>Amount for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>).</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;AgeQualifyingCode=&quot;10&quot; Count=&quot;2&quot;&gt;</code></td>
+<td><code class="prettyprint">AgeQualifyingCode</code></td>
 <td>This block represents the number of people in the <code class="prettyprint">&lt;RoomStay&gt;</code>. The <code class="prettyprint">AgeQualifyingCode=10</code> is the number of adults (in <code class="prettyprint">Count</code> value), and <code class="prettyprint">AgeQualifyingCode=8</code> is the number of children.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;CountryName Code=&quot;UK&quot;/&gt;</code></td>
+<td><code class="prettyprint">CountryName</code></td>
 <td>The only information we take from guests is their country of origin for segmentation analysis.</td>
 </tr>
 </tbody></table>

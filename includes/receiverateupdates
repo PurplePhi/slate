@@ -135,39 +135,39 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code class="prettyprint">&lt;wsa:MessageID&gt;9ff77969-348d&lt;/wsa:MessageID&gt;</code></td>
-<td>The <code class="prettyprint">MessageID</code>. You should use it inside the asynchronous callback message.</td>
+<td><code class="prettyprint">MessageID</code></td>
+<td>The <code class="prettyprint">MessageID</code> should be used inside the asynchronous callback message.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;wsa:Address&gt;https://api.pricematch.travel/rate_plan_notif_callback&lt;/wsa:Address&gt;</code></td>
+<td><code class="prettyprint">Address</code></td>
 <td>The URL to send the asynchronous call back message.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;wsse:UsernameToken&gt;</code></td>
+<td><code class="prettyprint">UsernameToken</code></td>
 <td>This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RatePlans HotelCode=&quot;13864&quot;&gt;</code></td>
-<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+<td><code class="prettyprint">HotelCode</code></td>
+<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;RatePlan RatePlanCode=&quot;BAR&quot;&gt;</code></td>
+<td><code class="prettyprint">RatePlanCode</code></td>
 <td>The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate Start=&quot;2017-03-05&quot; End=&quot;2017-03-05&quot;&gt;</code></td>
-<td><code class="prettyprint">Start</code> and <code class="prettyprint">End</code> are the date range attributes. Both are inclusive.</td>
+<td><code class="prettyprint">Start</code><br><code class="prettyprint">End</code></td>
+<td>The date range attributes. Both are inclusive.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate CurrencyCode=&quot;EUR&quot;&gt;</code></td>
-<td><code class="prettyprint">Currency</code> is the currency considered for this rate block.</td>
+<td><code class="prettyprint">CurrencyCode</code></td>
+<td>The currency considered for this rate block.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Rate InvTypeCode=&quot;DOUBLE&quot;&gt;</code></td>
+<td><code class="prettyprint">InvTypeCode</code></td>
 <td><code class="prettyprint">InvTypeCode</code> can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice).</td>
 </tr>
 <tr>
-<td><BaseByGuestAmt NumberOfGuests="1" AmountAfterTax="155"></td>
-<td><code class="prettyprint">NumberOfGuest</code> is the number of guests considered for the given amount, rate policy and room type.<br><code class="prettyprint">AmountAfterTax</code> is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people.</td>
+<td><code class="prettyprint">BaseByGuestAmt</code><br><code class="prettyprint">NumberOfGuests</code><br><code class="prettyprint">AmountAfterTax</code></td>
+<td><code class="prettyprint">NumberOfGuests</code> is the number of guests considered for the given amount, rate policy and room type.<br><code class="prettyprint">AmountAfterTax</code> is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people.</td>
 </tr>
 </tbody></table>

@@ -247,23 +247,23 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code class="prettyprint">&lt;Inventories HotelCode=&quot;HXCAIZZ&quot;&gt;</code></td>
-<td>The <code class="prettyprint">Hotel Code</code> variable maps the message to a specific property. This code must be defined by you.</td>
+<td><code class="prettyprint">HotelCode</code></td>
+<td>Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;Inventory&gt;</code></td>
+<td><code class="prettyprint">Inventory</code></td>
 <td>One <code class="prettyprint">&lt;Inventory&gt;</code> block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside></td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;StatusApplicationControl Start=&quot;2015-09-01&quot;&gt;</code></td>
-<td><code class="prettyprint">Start</code> is the stay date to be processed.</td>
+<td><code class="prettyprint">Start</code></td>
+<td>The stay date to be processed. The date format has to be YYYY-MM-DD</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;StatusApplicationControl InvTypeCode=&quot;King&quot;&gt;</code></td>
-<td><code class="prettyprint">InvTypeCode</code> is the room type code.</td>
+<td><code class="prettyprint">InvTypeCode</code></td>
+<td>Room type code.</td>
 </tr>
 <tr>
-<td><code class="prettyprint">&lt;InvCount CountType=&quot;1&quot; Count=&quot;20&quot;/&gt;</code></td>
+<td><code class="prettyprint">InvCount</code></td>
 <td>One <code class="prettyprint">&lt;InvCount&gt;</code> block defines the inventory count for one given status, for the considered date and room type.<br><br>The <code class="prettyprint">CountType</code> defines the room status based on the list above.<br>The <code class="prettyprint">Count</code> is the value of the updated inventory.</td>
 </tr>
 </tbody></table>

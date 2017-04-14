@@ -261,3 +261,65 @@ The message processing happens like this:
 3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</p>
 
 <aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
+
+<h3 id="fields-we-consider">Fields we consider</h3>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">InvBlock</code></td>
+<td>It&rsquo;s the block allocation block. We accept one InvBlock block for now.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">TransactionAction</code></td>
+<td>The transactional status of the block. It can be:<br>- &lsquo;Book&rsquo; (creates a new reservation)<br>- &lsquo;Modify&rsquo; (updates an existing reservation)<br>- &lsquo;Cancel&rsquo; (cancels a reservation)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">InvBlockCode</code></td>
+<td>The unique block ID that allow us to link all future messages to the right block in our database.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelCode</code></td>
+<td>Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">InvBlockDates</code></td>
+<td>Global dates of the block considered. <code class="prettyprint">Start</code> is the start date, <code class="prettyprint">End</code> the end date, and <code class="prettyprint">AbsoluteCutoff</code> is the release date of the block. <br>We consider the block released where AbsoluteCutoff &lt;= Today (including today)</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RoomType</code></td>
+<td>One <code class="prettyprint">RoomType</code> block is the piece of the block with a given room type and rate plan. <br>If there is only one rate plan and 2 different room types for the block, there will be at least 2 <code class="prettyprint">RoomType</code> blocks.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">CompanyName</code></td>
+<td>We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RatePlan</code></td>
+<td>One <code class="prettyprint">RatePlan</code> block gives the description of the rate plan for the given room type and time range.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RatePlanCode</code></td>
+<td>The <code class="prettyprint">RatePlanCode</code> is the rate plan code that will be shown and considered in our database, the <code class="prettyprint">CurrencyCode</code> the currency for the given rate plan (in ISO 4217).</td>
+</tr>
+<tr>
+<td><code class="prettyprint">BaseByGuestAmt</code></td>
+<td>One <code class="prettyprint">BaseByGuestAmt</code> allow to give the amount depending of the number of people that will finally be confirmed in the booking. We save in our database only the amount for <code class="prettyprint">NumberOfGuests</code> = 1</td>
+</tr>
+<tr>
+<td><code class="prettyprint">AmountAfterTax</code></td>
+<td>The amount after tax for the given rate plan. We don&rsquo;t save the amount before tax.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RoomTypeAllocations</code></td>
+<td><code class="prettyprint">RoomTypeAllocations</code> defines the number of units per status. The statuses we consider are:<br>- 1 Definite availability<br>- 2 Tentative availability<br>- 3 Definite sold<br>- 4 Tentative sold<br><aside class="notice">The final number of units blocked for a given date will be:<br>(Definite availability + Tentative availability) - (Definite sold + Tentative sold)</aside></td>
+</tr>
+<tr>
+<td><code class="prettyprint">RoomTypeAllocation</code></td>
+<td>One <code class="prettyprint">RoomTypeAllocation</code> line gives the number of units for the given <code class="prettyprint">RoomTypePickupStatus</code> and a considered time range (starting with <code class="prettyprint">Start</code>, finishing with <code class="prettyprint">End</code>).<br>Generally, Start=End.</td>
+</tr>
+</tbody></table>
