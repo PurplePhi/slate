@@ -264,22 +264,22 @@ Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a singl
 
 |  |  |
 | --- | --- |
-| `<OTA_ResNotifRQ ResStatus=”Commit”/>` | Transactional status of the reservation. It can be:<br>- 'Commit' (creates a new reservation)<br>- 'Modify' (updates an existing reservation)<br>- 'Cancel' (cancels a reservation) |
+| `OTA_ResNotifRQ`<br>`ResStatus` | Transactional status of the reservation. It can be:<br>- 'Commit' (creates a new reservation)<br>- 'Modify' (updates an existing reservation)<br>- 'Cancel' (cancels a reservation) |
 | `<HotelReservation>` | Reservation block. We accept up to 1000 blocks. |
-| `<HotelReservation CreateDateTime="2005-10-09T08:51:45 UTC">` | This is what we consider as the booking date. Please ensure the timezone matches that of the property. |
-| `<HotelReservation ResStatus="Reserved">` | Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation) |
-| `<UniqueID ID="3741"/>` | Unique reservation ID of the reservation that will permit us to link your message to the reservation in our database. |
-| `<BasicPropertyInfo HotelCode="HXCAIZZ">` | The `Hotel Code` variable maps the message to a specific property. This code must be defined by you |
-| `<CompanyName Code="OTA">WEB</CompanyName>` | We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL). |
-| `<RoomStay>` | One `<Roomstay>` block is one room booked for the given reservation. |
-| `<RoomStay MarketCode:"CORP">` | `MarketCode` is the intent of the stay, and what we take as segmentation data (leisure, corporate, etc). |
-| `<RoomStay SourceOfBusiness="Booking.com">` | `SourceOfBusiness` is what we take as the agency. |
-| `<RoomRate>` | One `<RoomRate>` block represents one rate for one rate plan and one room type.<aside class="notice">If the booking has 2 different room types, there will be at least 2 `RoomRate` blocks. If a booking has one room type, with 2 nights with a different rate plan, there will be 2 `RoomRate` blocks.</aside> |
-| `<RoomRate RoomTypeCode="KING”>` | `RoomTypeCode` is the room type. It must match the `InvTypeCode` in inventory messages. |
-| `<RoomRate RatePlanCode="RACK">` | `NumberOfUnits` is the number of rooms under the same roomtype and rate plan. |
-| `<RoomRate NumberOfUnits="1">` | `NumberOfUnits` is the number of rooms under the same roomtype and rate plan. |
-| `<Rate>` | One `<Rate>` block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 `<Rate>` blocks.</aside> |
-| `<Rate EffectiveDate="2006-01-12" ExpireDate="2006-01-15">` | Dates to define the time range of the `<Rate>`. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside> |
-| `<Base AmountAfterTax="100.00" CurrencyCode="EUR"/>` | Amount rate for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>). |
-| `<AgeQualifyingCode="10" Count="2">` | This block represents the number of people in the `<RoomStay>`. The `AgeQualifyingCode=10` is the number of adults (in `Count` value), and `AgeQualifyingCode=8` is the number of children. |
-| `<CountryName Code="UK"/>` | The only information we take from guests is their country of origin for segmentation analysis. |
+| `CreateDateTime` | This is what we consider as the booking date. Please ensure the timezone matches that of the property. Format 2016-10-09T08:51:45 UTC |
+| `HotelReservation`<br>`ResStatus` | Reservation status. It can be:<br>- Reserved (confirmed reservation)<br>- Waitlisted(reservation on waitlist)<br>- In-House (in-house booking)<br>- Checked-Out (already checked-out reservation)<br>- Cancelled (already cancelled reservation)<br> <aside class="warning">Not to be confused with `OTA_ResNotifRQ ResStatus`</aside>|
+| `UniqueID` | Unique reservation ID of the reservation that will permit us to link your message to the reservation in our database. |
+| `HotelCode` | Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite. |
+| `CompanyName` | We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL). |
+| `RoomStay` | One `<Roomstay>` block is one room booked for the given reservation. |
+| `MarketCode` | `MarketCode` is the intent of the stay, and what we take as segmentation data (leisure, corporate, etc). |
+| `SourceOfBusiness` | `SourceOfBusiness` is what we take as the agency. |
+| `RoomRate` | One `<RoomRate>` block represents one rate for one rate plan and one room type.<aside class="notice">If the booking has 2 different room types, there will be at least 2 `RoomRate` blocks. If a booking has one room type, with 2 nights with a different rate plan, there will be 2 `RoomRate` blocks.</aside> |
+| `RoomTypeCode` | Room type. It must match the `InvTypeCode` in inventory messages. |
+| `RatePlanCode` | Rate plan used for this reservation |
+| `NumberOfUnits` | Number of rooms under the same roomtype and rate plan. |
+| `Rate` | One `<Rate>` block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 `<Rate>` blocks.</aside> |
+| `EffectiveDate`<br>`ExpireDate` | Dates to define the time range of the `<Rate>`. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside> |
+| `AmountAfterTax`<br>`CurrencyCode` | Amount for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>). |
+| `AgeQualifyingCode` | This block represents the number of people in the `<RoomStay>`. The `AgeQualifyingCode=10` is the number of adults (in `Count` value), and `AgeQualifyingCode=8` is the number of children. |
+| `CountryName` | The only information we take from guests is their country of origin for segmentation analysis. |

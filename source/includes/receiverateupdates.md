@@ -130,12 +130,12 @@ When receiving a rate, you should keep sending another GET request in a loop, un
 
 |  |  |
 | --- | --- |
-| `<wsa:MessageID>9ff77969-348d</wsa:MessageID>` | The `MessageID`. You should use it inside the asynchronous callback message. |
-| `<wsa:Address>https://api.pricematch.travel/rate_plan_notif_callback</wsa:Address>` | The URL to send the asynchronous call back message. |
-| `<wsse:UsernameToken>` | This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside> |
-| `<RatePlans HotelCode="13864">` | The `Hotel Code` variable maps the message to a specific property. This code must be defined by you. |
-| `<RatePlan RatePlanCode="BAR">`| The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR. |
-| `<Rate Start="2017-03-05" End="2017-03-05">` | `Start` and `End` are the date range attributes. Both are inclusive. |
-| `<Rate CurrencyCode="EUR">` | `Currency` is the currency considered for this rate block. |
-| `<Rate InvTypeCode="DOUBLE">` | `InvTypeCode` can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice). |
-| <BaseByGuestAmt NumberOfGuests="1" AmountAfterTax="155"> | `NumberOfGuest` is the number of guests considered for the given amount, rate policy and room type.<br>`AmountAfterTax` is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people. |
+| `MessageID` | The `MessageID` should be used inside the asynchronous callback message. |
+| `Address` | The URL to send the asynchronous call back message. |
+| `UsernameToken` | This field will contain your web service credentials. It can be one username/password for all properties, or a different username/password for each property.<aside class="notice">The first possibility (one username/password for all properties) is easier to manage.</aside> |
+| `HotelCode` | The `Hotel Code` variable maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite. |
+| `RatePlanCode`| The rate policy code we refer to. If your system doesn’t support different rate policies, we can send a default value like BAR. |
+| `Start`<br>`End` | The date range attributes. Both are inclusive. |
+| `CurrencyCode` | The currency considered for this rate block. |
+| `InvTypeCode` | `InvTypeCode` can be anything that enable us to uniquely identify a room type for a given hotel. It could be a room type or a room code (your choice). |
+| `BaseByGuestAmt`<br>`NumberOfGuests`<br>`AmountAfterTax` | `NumberOfGuests` is the number of guests considered for the given amount, rate policy and room type.<br>`AmountAfterTax` is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people. |

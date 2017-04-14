@@ -270,3 +270,21 @@ The message processing happens like this:
 3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold
 
 <aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
+
+### Fields we consider
+
+|  |  |
+| --- | --- |
+| `InvBlock` | It's the block allocation block. We accept one InvBlock block for now. |
+| `TransactionAction` | The transactional status of the block. It can be:<br>- 'Book' (creates a new reservation)<br>- 'Modify' (updates an existing reservation)<br>- 'Cancel' (cancels a reservation) |
+| `InvBlockCode` | The unique block ID that allow us to link all future messages to the right block in our database. |
+| `HotelCode` | Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite. |
+| `InvBlockDates` | Global dates of the block considered. `Start` is the start date, `End` the end date, and `AbsoluteCutoff` is the release date of the block. <br>We consider the block released where AbsoluteCutoff <= Today (including today) |
+| `RoomType` | One `RoomType` block is the piece of the block with a given room type and rate plan. <br>If there is only one rate plan and 2 different room types for the block, there will be at least 2 `RoomType` blocks. |
+| `CompanyName` | We take this block as the source of the booking.<br>‘Code’ specifies the source (web, OTA, email, etc.), while the field is the general channel (Walk-in, WEB, TEL). |
+| `RatePlan` | One `RatePlan` block gives the description of the rate plan for the given room type and time range. |
+| `RatePlanCode` | The `RatePlanCode` is the rate plan code that will be shown and considered in our database, the `CurrencyCode` the currency for the given rate plan (in ISO 4217). |
+| `BaseByGuestAmt` | One `BaseByGuestAmt` allow to give the amount depending of the number of people that will finally be confirmed in the booking. We save in our database only the amount for `NumberOfGuests` = 1 |
+| `AmountAfterTax` | The amount after tax for the given rate plan. We don't save the amount before tax. |
+| `RoomTypeAllocations` | `RoomTypeAllocations` defines the number of units per status. The statuses we consider are:<br>- 1 Definite availability<br>- 2 Tentative availability<br>- 3 Definite sold<br>- 4 Tentative sold<br><aside class="notice">The final number of units blocked for a given date will be:<br>(Definite availability + Tentative availability) - (Definite sold + Tentative sold)</aside> |
+| `RoomTypeAllocation` | One `RoomTypeAllocation` line gives the number of units for the given `RoomTypePickupStatus` and a considered time range (starting with `Start`, finishing with `End`).<br>Generally, Start=End. |

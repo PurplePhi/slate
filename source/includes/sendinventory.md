@@ -249,8 +249,8 @@ If it is not possible to send only the dates and room types modified, instead se
 
 |  |  |
 | --- | --- |
-| `<Inventories HotelCode="HXCAIZZ">` | The `Hotel Code` variable maps the message to a specific property. This code must be defined by you. |
-| `<Inventory>` | One `<Inventory>` block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside> |
-| `<StatusApplicationControl Start="2015-09-01">`   | `Start` is the stay date to be processed. |
-| `<StatusApplicationControl InvTypeCode="King">` | `InvTypeCode` is the room type code. |
-| `<InvCount CountType="1" Count="20"/>`| One `<InvCount>` block defines the inventory count for one given status, for the considered date and room type.<br><br>The `CountType` defines the room status based on the list above.<br>The `Count` is the value of the updated inventory. |
+| `HotelCode` |  Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite. |
+| `Inventory` | One `<Inventory>` block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside> |
+| `Start` | The stay date to be processed. The date format has to be YYYY-MM-DD |
+| `InvTypeCode` | Room type code. |
+| `InvCount` | One `<InvCount>` block defines the inventory count for one given status, for the considered date and room type.<br><br>The `CountType` defines the room status based on the list above.<br>The `Count` is the value of the updated inventory. |
