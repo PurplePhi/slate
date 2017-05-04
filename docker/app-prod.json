@@ -1,0 +1,33 @@
+{
+    "constraints": null,
+    "needNFS": false,
+    "clusters": [
+        {
+            "nShards": 1,
+            "nInstances": 1,
+            "marathon": "https://marathon-lhr4.booking.com",
+            "domain": "specs-ratemanager.prod.booking.com",
+            "env": null
+        }
+    ],
+    "app_type": "html",
+    "registry_folder": "bsuite",
+    "tool_version": "0.1",
+    "local_volumes": [
+        {
+            "hostPath": "/etc/sysconfig/bookings.puppet",
+            "containerPath": "/etc/sysconfig/bookings.puppet",
+            "readwrite": false
+        }
+    ],
+    "tcp_ports": [
+        80
+    ],
+    "app_name": "specs-ratemanager",
+    "memory": 512,
+    "cpu": 1,
+    "labels" : {
+      "domain1" : "specs-ratemanager.booking.com",
+      "external" : "on"
+    }
+}

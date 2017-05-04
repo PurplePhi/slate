@@ -1,0 +1,32 @@
+{
+    "labels": {
+        "ssl" : "off",
+        "auth" : "off",
+        "external" : "on"
+    },
+    "healthChecks": [
+        {
+            "protocol": "HTTP",
+            "portIndex": 0,
+            "gracePeriodSeconds": 200,
+            "intervalSeconds": 60,
+            "timeoutSeconds": 30,
+            "maxConsecutiveFailures": 3,
+            "ignoreHttp1xx": false
+        }
+    ],
+    "container": {
+        "type": "DOCKER",
+        "volumes": [],
+        "docker": {
+            "network": "BRIDGE",
+            "portMappings": [],
+            "privileged": false,
+            "upgradeStrategy": {
+                "minimumHealthCapacity": 0.10,
+                "maximumOverCapacity": 1
+            },
+            "forcePullImage": false
+        }
+    }
+}
