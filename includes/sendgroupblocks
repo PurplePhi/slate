@@ -255,18 +255,19 @@
 <p>This message permits RateManager to be alerted about a group block. We consider a group block to be a large booking (generally more than 10 rooms) that needs to be confirmed by participants and is under a specific expiration policy.</p>
 
 <p>We use the HTNG 2013 specification to define the number of rooms blocked, and already sold. Each message should contain one block (one unique block id) for a single hotel.
-The message processing happens like this:
-1. We cross all room types, for each room type we cross all rate plans applied and save them in memory
-2. We cross all counts of each block and attach them to one room type and one rate plan
-3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</p>
+The message processing happens like this:</p>
+
+<ol>
+<li>We cross all room types, for each room type we cross all rate plans applied and save them in memory</li>
+<li>We cross all counts of each block and attach them to one room type and one rate plan</li>
+<li>Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</li>
+</ol>
 
 <aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>

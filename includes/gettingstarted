@@ -9,7 +9,7 @@
 </code></pre>
 <p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/" target="_blank">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
 
-<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm" target="_blank">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
+<p>The XML messages that will be sent and received are to be written in SOAP Message structure. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
 
 <p>From PMS to BookingSuite RateManager (1-Way Connection):</p>
 
@@ -19,7 +19,7 @@
 <li><strong>OTA_HotelInvBlockNotifRQ</strong> message to post group block allocation creation, modification, cancellation</li>
 </ul>
 
-<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection)</p>
+<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection):</p>
 
 <ul>
 <li><strong>OTA_RatePlanNotifRQ</strong> message: BookingSuite RateManager posts rates triggered by user&rsquo;s validation on our website.</li>
@@ -78,5 +78,11 @@
 <td>Receiving rate update validated by the customer</td>
 <td>Yes</td>
 <td>RateManager -&gt; PMS</td>
+</tr>
+<tr>
+<td>OTA_HotelProductRS</td>
+<td>Receiving property configuration information</td>
+<td>No</td>
+<td>PMS -&gt; RateManager</td>
 </tr>
 </tbody></table>

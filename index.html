@@ -321,13 +321,24 @@
 
           <h2 id="testing-with-postman">Testing with Postman</h2>
 
-<p>The entire BookingSuite RateManager API collection can be easily imported into Postman, by clicking the button below:</p>
+<p>The BookingSuite RateManager API collection can be easily imported into Postman, by clicking the button below:</p>
 
-<p><a href="https://app.getpostman.com/run-collection/eec44e8fee824aa39c71"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
+<div class="postman-run-button"
+style="margin-left: 2em;"
+data-postman-action="collection/import"
+data-postman-var-1="0c755fbb52ccef5c8548"></div>
 
-<p>Postman is a free application that allows you to execute test calls in an intuitive interface. When making test calls, you should use the sandbox environment.</p>
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
 
-<p><a href="https://bookingsuite.revenue-management.travel/en/sandbox/data/reservations/8697f41528bf1356a3405c1ef0b2335f" target="_blank"><strong>Check results in sandbox</strong></a></p>
+<p>Postman is a free application that allows you to execute test calls in an intuitive interface. When making test calls, you should use the sandbox environment. If you were not provided a sandbox, please request it at bookingsuite.connectivity@booking.com or via the help button.</p>
 
           <h1 id="web-service">Web Service</h1>
 
@@ -342,7 +353,7 @@
 </code></pre>
 <p>Our specification is based on the <a href="https://s3-eu-west-1.amazonaws.com/static-assets-20120401/HTNG/Technical+specification+documents.zip">HTNG 2013B</a> specification, as created by the <a href="http://www.htng.org/" target="_blank">Hotel Technology Next Generation Association</a>. All relevant code and details that we use will be explained in the following sections for your convenience. Refer to the HTNG 2013B specification at your own discretion and necessity.</p>
 
-<p>The XML messages that will be sent and received are to be written in <a href="https://www.tutorialspoint.com/soap/soap_message_structure.htm" target="_blank">SOAP Message structure</a>. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
+<p>The XML messages that will be sent and received are to be written in SOAP Message structure. We support both SOAP 1.1 and 1.2 versions. Specifically, these messages are:</p>
 
 <p>From PMS to BookingSuite RateManager (1-Way Connection):</p>
 
@@ -352,7 +363,7 @@
 <li><strong>OTA_HotelInvBlockNotifRQ</strong> message to post group block allocation creation, modification, cancellation</li>
 </ul>
 
-<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection)</p>
+<p>From BookingSuite RateManager to the PMS or Channel manager (2-Way Connection):</p>
 
 <ul>
 <li><strong>OTA_RatePlanNotifRQ</strong> message: BookingSuite RateManager posts rates triggered by user&rsquo;s validation on our website.</li>
@@ -411,6 +422,12 @@
 <td>Receiving rate update validated by the customer</td>
 <td>Yes</td>
 <td>RateManager -&gt; PMS</td>
+</tr>
+<tr>
+<td>OTA_HotelProductRS</td>
+<td>Receiving property configuration information</td>
+<td>No</td>
+<td>PMS -&gt; RateManager</td>
 </tr>
 </tbody></table>
 
@@ -654,11 +671,9 @@
 
 <p>If it is not possible to send only the dates and room types modified, instead send a full update every hour (all room types, full horizon 365 days).</p>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>
@@ -937,11 +952,9 @@
 
 <p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>
@@ -1280,18 +1293,19 @@
 <p>This message permits RateManager to be alerted about a group block. We consider a group block to be a large booking (generally more than 10 rooms) that needs to be confirmed by participants and is under a specific expiration policy.</p>
 
 <p>We use the HTNG 2013 specification to define the number of rooms blocked, and already sold. Each message should contain one block (one unique block id) for a single hotel.
-The message processing happens like this:
-1. We cross all room types, for each room type we cross all rate plans applied and save them in memory
-2. We cross all counts of each block and attach them to one room type and one rate plan
-3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</p>
+The message processing happens like this:</p>
+
+<ol>
+<li>We cross all room types, for each room type we cross all rate plans applied and save them in memory</li>
+<li>We cross all counts of each block and attach them to one room type and one rate plan</li>
+<li>Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold</li>
+</ol>
 
 <aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>
@@ -1446,7 +1460,7 @@ The message processing happens like this:
 <p>This message allows us to notify your system about rate updates that a property would like to perform, and lets you handle channel management. These rate updates can be triggered manually by the property, or automatically according to RateManager settings decided by the property (difference with the current price, dates, etc&hellip;).</p>
 
 <p>The message contains the list of the new prices for different check-in dates and their corresponding conditions (room type, the number of guests, and the rate plan). Since our Revenue Management System and your system use different codes (hotel codes, room codes, etc.), we should agree beforehand on which system codes we should use in the message. By default, we assume we will use all your system codes. Please let us know if you want to do otherwise.
-<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner.</aside></p>
+<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner. Once you receive a price update for a specific date, room type, rate plan and occupancy combination, the old price in your system needs to be overwritten.</aside></p>
 
 <h3 id="push-mode-post-from-ratemanager-to-your-system">Push Mode (POST from RateManager to your system)</h3>
 
@@ -1477,11 +1491,9 @@ The message processing happens like this:
 
 <p>When receiving a rate, you should keep sending another GET request in a loop, until you receive a 204. That’s very important, otherwise you might get into a condition where you never manage to fetch all the rates updates we have.</p>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>
@@ -1522,6 +1534,123 @@ The message processing happens like this:
 <td><code class="prettyprint">NumberOfGuests</code> is the number of guests considered for the given amount, rate policy and room type.<br><code class="prettyprint">AmountAfterTax</code> is a positive numeric value that is the rate to apply for the given rate policy, room type and number of people.</td>
 </tr>
 </tbody></table>
+
+          <h2 id="self-build">Self Build</h2>
+
+<h3 id="full-automation-workflow">Full automation workflow</h3>
+
+<p><img src="images/fullautomation.PNG" alt="selfbuild" /></p>
+
+<h3 id="partner-signs-up-for-ratemanager">Partner signs up for RateManager</h3>
+
+<blockquote>
+<p>Redirect from RateManager signup to provider authentication screen:</p>
+
+<p>304 to https://[provider_url.com]?hotel_code=<b>12345</b>&amp;token=<b>a2ed4f5</b></p>
+</blockquote>
+
+<p>You need to provide us with a endpoint URL for new signups.
+BookingSuite will send a 304 with a unique token and the Booking.com hotel ID.</p>
+
+<p>You need to be able to accept and validate the Booking.com ID and map it to your own hotel ID.</p>
+
+<p>The hotel partner will be redirected to your domain with the Booking.com hotel ID and unique token. This should be an authentication screen where the hotel partner can then log in with their credentials, choose a property (if applicable) and accept terms (if any).</p>
+
+<blockquote>
+<p>Redirect back to RateManager onboaridng process once successfully authenticated:</p>
+
+<p>304 to https://bookingsuite.revenue-management.travel/onboarding?token=<b>a2ed4f5</b></p>
+</blockquote>
+
+<p>Upon successfuly authentication, you should send us back a 304 with the same unique token.</p>
+
+<p>The hotel partner will be redirected back to our onboarding platform to continue setup of their RateManager.</p>
+
+<p>Once the hotel partner was successfully authenticated, you should trigger sending the hotel’s initial data (history, current, future reservations and inventory) and activate the interface.</p>
+
+<p><img src="images/signup.PNG" alt="signup" /></p>
+
+<aside class="warning">This process must be asynchronous, meaning that you should not wait for all the data to be sent before redirecting back to us. The 304 redirect should be sent immediately so the hotel partner can continue using RateManager.</aside>
+
+<h3 id="hotel-config">Hotel Config</h3>
+
+<blockquote>
+<p>GET https://[provider_url.com]?hotel_code=123&amp;username=me&amp;password=hi</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;OTA_HotelProductRS&gt;</span>
+<span class="nt">&lt;HotelProducts&gt;</span>
+   <span class="nt">&lt;HotelProduct&gt;</span>
+       <span class="nt">&lt;RoomTypes&gt;</span>
+           <span class="nt">&lt;RoomType</span> <span class="na">RoomTypeCode=</span><span class="s">"3984"</span> <span class="na">RoomTypeName=</span><span class="s">"Double - Disabled Access"</span> <span class="na">MaxOccupancy=</span><span class="s">"2"</span> <span class="na">NbrOfBedrooms=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+           <span class="nt">&lt;RoomType</span> <span class="na">RoomTypeCode=</span><span class="s">"3985"</span> <span class="na">RoomTypeName=</span><span class="s">"Double"</span> <span class="na">MaxOccupancy=</span><span class="s">"2"</span> <span class="na">NbrOfBedrooms=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;RoomType</span> <span class="na">RoomTypeCode=</span><span class="s">"3987"</span> <span class="na">RoomTypeName=</span><span class="s">"Executive Double"</span> <span class="na">MaxOccupancy=</span><span class="s">"2"</span> <span class="na">NbrOfBedrooms=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;RoomType</span> <span class="na">RoomTypeCode=</span><span class="s">"3988"</span> <span class="na">RoomTypeName=</span><span class="s">"Superior Double"</span> <span class="na">MaxOccupancy=</span><span class="s">"2"</span> <span class="na">NbrOfBedrooms=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/RoomTypes&gt;</span>
+       <span class="nt">&lt;RatePlans&gt;</span>
+           <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"30327"</span> <span class="na">RatePlanName=</span><span class="s">"Bed and Breakfast"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;RatePlan</span> <span class="na">RatePlanCode=</span><span class="s">"30332"</span> <span class="na">RatePlanName=</span><span class="s">"Corporate Bed and Breakfast"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;/RatePlans&gt;</span>
+   <span class="nt">&lt;/HotelProduct&gt;</span>
+<span class="nt">&lt;/HotelProducts&gt;</span>
+<span class="nt">&lt;/OTA_HotelProductRS&gt;</span>
+</code></pre>
+<p>In order to successfully set up the rate update we need to be able to map your rooms and rate plans to the calendar views in RateManager. You need to provide us with an endpoint we can call to get the hotel configuration.</p>
+
+<p>Authentication should be handled within the URL and the credentials need to be the same as the ones used in other messages.</p>
+
+<p>The response should include the following:</p>
+
+<table><thead>
+<tr>
+<th>Room types</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">RoomTypeCode</code></td>
+<td>Room type code used in the inventory and reservation messages.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RoomTypeName</code></td>
+<td>Full name of the room. This will be displayed in reporting.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">MaxOccupancy</code></td>
+<td>Maximum occupancy of that room type.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">NbrOfBedrooms</code></td>
+<td>Total number of rooms of this type in the property.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Rate plans</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">RatePlanCode</code></td>
+<td>Rate plan code used in the reservation messages.</td>
+</tr>
+<tr>
+<td><code class="prettyprint">RatePlanName</code></td>
+<td>Full name of the rate plan. This will be displayed in reporting.</td>
+</tr>
+</tbody></table>
+
+<h3 id="reset-re-sync">Reset - Re-sync</h3>
+
+<blockquote>
+<p>GET https://[provider_url.com]?hotel_code=123&amp;username=me&amp;password=hi</p>
+</blockquote>
+
+<p>Ask the PMS to send data again (start from scratch: history + in house + future)
+PMS needs to provide us with an endpoint we can call
+The only response expected is 200
+PMS will use the usual endpoint to post data</p>
 
           <h1 id="sandbox">Sandbox</h1>
 

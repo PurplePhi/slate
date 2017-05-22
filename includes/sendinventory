@@ -238,11 +238,9 @@
 
 <p>If it is not possible to send only the dates and room types modified, instead send a full update every hour (all room types, full horizon 365 days).</p>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>

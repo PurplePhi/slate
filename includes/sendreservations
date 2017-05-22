@@ -251,11 +251,9 @@
 
 <p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
 
-<h3 id="fields-we-consider">Fields we consider</h3>
-
 <table><thead>
 <tr>
-<th></th>
+<th>Fields we consider</th>
 <th></th>
 </tr>
 </thead><tbody>
