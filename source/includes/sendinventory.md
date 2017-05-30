@@ -245,9 +245,7 @@ It is also required to send a full inventory update every 24 hours to correct an
 
 If it is not possible to send only the dates and room types modified, instead send a full update every hour (all room types, full horizon 365 days).
 
-### Fields we consider
-
-|  |  |
+| Fields we consider |  |
 | --- | --- |
 | `HotelCode` |  Maps the message to a specific property. You will receive the hotel code for each new property from BookingSuite. |
 | `Inventory` | One `<Inventory>` block is given for one date and one room type of the inventory update.<aside class="notice">If 2 room types are updated, there will be at least 2 Inventory blocks. If 2 dates are updated, there will be at least 2 Inventory blocks.</aside> |

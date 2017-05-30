@@ -13,7 +13,6 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
-    <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <soap:Body>
@@ -23,58 +22,58 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
           <HotelRef HotelCode="45121140"/>
           <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
+            <RoomType RoomTypeCode="Double">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-01" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
+                <RatePlan RatePlanCode="GROUP1">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="105.00" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="105.00" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="5"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
+                <RatePlan RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="90" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="90" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="3"/>
               </RoomTypeAllocations>
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="95" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="95" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
+            <RoomType RoomTypeCode="Twin">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="220" CurrencyCode="HRK" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
+                <RatePlan Start="2017-06-02" End="2017-06-04" RatePlanCode="GROUP3">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="110" CurrencyCode="HRK" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
@@ -100,7 +99,6 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
-    <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <soap:Body>
@@ -110,58 +108,58 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
           <HotelRef HotelCode="45121140"/>
           <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
+            <RoomType RoomTypeCode="Double">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-01" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
+                <RatePlan RatePlanCode="GROUP1">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="105.00" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="105.00" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="5"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
+                <RatePlan RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="90" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="90" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="3"/>
               </RoomTypeAllocations>
-              <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
+              <RoomTypeAllocations RoomTypePickUpStatus="3">
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="95" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="95" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
+            <RoomType RoomTypeCode="Twin">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="220" CurrencyCode="HRK" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
+                <RatePlan Start="2017-06-02" End="2017-06-04" RatePlanCode="GROUP3">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="110" CurrencyCode="HRK" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
@@ -187,7 +185,6 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       </wsse:UsernameToken>
     </wsse:Security>
     <wsa:MessageID>8ee65699-8b8b-8427-2822-687da8b55a89</wsa:MessageID>
-    <wsa:CorrelationID>9ff77969-348d-4ed5-bc64-e7a5df4f0f9b</wsa:CorrelationID>
     <wsa:To>https://api.pricematch.travel/htng_message</wsa:To>
   </soap:Header>
   <soap:Body>
@@ -195,60 +192,60 @@ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-s
       <InvBlocks>
         <InvBlock InvBlockCode="FANCY_CONGRESS" TransactionAction="Cancel">
           <HotelRef HotelCode="45121140"/>
-          <InvBlockDates AbsoluteCutoff="2017-05-01" End="2017-06-04" Start="2017-06-01"/>
+          <InvBlockDates AbsoluteCutoff="2017-06-01" End="2017-06-04" Start="2017-06-01"/>
           <RoomTypes>
-            <RoomType End="2017-06-01" RoomTypeCode="C2T" Start="2017-06-01">
+            <RoomType RoomTypeCode="Double">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-01" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-01" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="25" RatePlanCode="GROUP1">
+                <RatePlan RatePlanCode="GROUP1">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="105.00" NumberOfGuests="1"/>
+                    <BaseByGuestAmt AmountAfterTax="105.00" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="KGB" Start="2017-06-01">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="5" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="5"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="EUR" NumberOfUnits="5" RatePlanCode="GROUP2">
+                <RatePlan RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="90" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="90" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-03" RoomTypeCode="KGB" Start="2017-06-03">
+            <RoomType RoomTypeCode="King">
               <RoomTypeAllocations RoomTypePickUpStatus="2">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="3" Start="2017-06-03"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="3"/>
               </RoomTypeAllocations>
-              <RoomTypeAllocations RoomTypePickUpStatus="4">
-                <RoomTypeAllocation End="2017-06-03" NumberOfUnits="1" Start="2017-06-03"/>
+              <RoomTypeAllocations RoomTypePickUpStatus="3">
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" NumberOfUnits="3" RatePlanCode="GROUP1">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="95" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="95" CurrencyCode="EUR" NumberOfGuests="1"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
             </RoomType>
-            <RoomType End="2017-06-04" RoomTypeCode="TWB" Start="2017-06-01">
+            <RoomType RoomTypeCode="Twin">
               <RoomTypeAllocations>
-                <RoomTypeAllocation End="2017-06-04" NumberOfUnits="1" Start="2017-06-01"/>
+                <RoomTypeAllocation Start="2017-06-01" End="2017-06-04" NumberOfUnits="1"/>
               </RoomTypeAllocations>
               <RatePlans>
-                <RatePlan CurrencyCode="IDR" End="2017-06-02" NumberOfUnits="1" RatePlanCode="GROUP2" Start="2017-06-01">
+                <RatePlan Start="2017-06-01" End="2017-06-02" RatePlanCode="GROUP2">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="220" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="220" CurrencyCode="HRK" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
-                <RatePlan CurrencyCode="IDR" End="2017-06-04" NumberOfUnits="1" RatePlanCode="GROUP3" Start="2017-06-02">
+                <RatePlan Start="2017-06-02" End="2017-06-04" RatePlanCode="GROUP3">
                   <BaseByGuestAmts>
-                    <BaseByGuestAmt AmountAfterTax="110" NumberOfGuests="2"/>
+                    <BaseByGuestAmt AmountAfterTax="110" CurrencyCode="HRK" NumberOfGuests="2"/>
                   </BaseByGuestAmts>
                 </RatePlan>
               </RatePlans>
@@ -265,15 +262,14 @@ This message permits RateManager to be alerted about a group block. We consider 
 
 We use the HTNG 2013 specification to define the number of rooms blocked, and already sold. Each message should contain one block (one unique block id) for a single hotel.
 The message processing happens like this:
+
 1. We cross all room types, for each room type we cross all rate plans applied and save them in memory
 2. We cross all counts of each block and attach them to one room type and one rate plan
 3. Finally, we consider each day of the group block to create one booking with the right room type, rate plan and number of units blocked or sold
 
-<aside class="warning">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
+<aside class="notice">Please note that at each modification of the block, we delete the block to insert it again. That means that you must send the complete block each time.</aside>
 
-### Fields we consider
-
-|  |  |
+| Fields we consider |  |
 | --- | --- |
 | `InvBlock` | It's the block allocation block. We accept one InvBlock block for now. |
 | `TransactionAction` | The transactional status of the block. It can be:<br>- 'Book' (creates a new reservation)<br>- 'Modify' (updates an existing reservation)<br>- 'Cancel' (cancels a reservation) |
@@ -288,3 +284,5 @@ The message processing happens like this:
 | `AmountAfterTax` | The amount after tax for the given rate plan. We don't save the amount before tax. |
 | `RoomTypeAllocations` | `RoomTypeAllocations` defines the number of units per status. The statuses we consider are:<br>- 1 Definite availability<br>- 2 Tentative availability<br>- 3 Definite sold<br>- 4 Tentative sold<br><aside class="notice">The final number of units blocked for a given date will be:<br>(Definite availability + Tentative availability) - (Definite sold + Tentative sold)</aside> |
 | `RoomTypeAllocation` | One `RoomTypeAllocation` line gives the number of units for the given `RoomTypePickupStatus` and a considered time range (starting with `Start`, finishing with `End`).<br>Generally, Start=End. |
+
+<aside class="warning">When a reservation is made with a block allocation, the reservation should come through with the block code and a block notification should be sent decrementing the available blocked rooms.</aside>

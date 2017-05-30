@@ -97,7 +97,7 @@
 This message allows us to notify your system about rate updates that a property would like to perform, and lets you handle channel management. These rate updates can be triggered manually by the property, or automatically according to RateManager settings decided by the property (difference with the current price, dates, etc...).
 
 The message contains the list of the new prices for different check-in dates and their corresponding conditions (room type, the number of guests, and the rate plan). Since our Revenue Management System and your system use different codes (hotel codes, room codes, etc.), we should agree beforehand on which system codes we should use in the message. By default, we assume we will use all your system codes. Please let us know if you want to do otherwise.
-<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner.</aside>
+<aside class="notice">All rates we push have been approved by the user first - any updates that are implemented have been analyzed and validated by the property owner. Once you receive a price update for a specific date, room type, rate plan and occupancy combination, the old price in your system needs to be overwritten.</aside>
 
 ### Push Mode (POST from RateManager to your system)
 
@@ -126,9 +126,7 @@ If we don't have any rate updates to send, we'll respond with a 204 status code 
 
 When receiving a rate, you should keep sending another GET request in a loop, until you receive a 204. That’s very important, otherwise you might get into a condition where you never manage to fetch all the rates updates we have.
 
-### Fields we consider
-
-|  |  |
+| Fields we consider |  |
 | --- | --- |
 | `MessageID` | The `MessageID` should be used inside the asynchronous callback message. |
 | `Address` | The URL to send the asynchronous call back message. |

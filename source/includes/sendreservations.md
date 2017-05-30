@@ -32,7 +32,7 @@
           <RoomStays>
             <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King" InvBlockCode="">
                   <Rates>
                     <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
@@ -78,7 +78,7 @@
           <RoomStays>
             <RoomStay MarketCode="Corp" SourceOfBusiness="Special Company">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="Deluxe">
+                <RoomRate NumberOfUnits="1" RatePlanCode="CORP" RoomTypeCode="Deluxe" InvBlockCode="">
                   <Rates>
                     <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="55.00" CurrencyCode="EUR"/>
@@ -150,7 +150,7 @@
           <RoomStays>
             <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King" InvBlockCode="">
                   <Rates>
                     <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
@@ -219,7 +219,7 @@
           <RoomStays>
             <RoomStay MarketCode="Leisure" SourceOfBusiness="BOOKING.COM">
               <RoomRates>
-                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King">
+                <RoomRate NumberOfUnits="1" RatePlanCode="BAR" RoomTypeCode="King" InvBlockCode="">
                   <Rates>
                     <Rate EffectiveDate="2017-05-01" ExpireDate="2017-05-02" RateTimeUnit="Night" UnitMultiplier="1">
                       <Base AmountAfterTax="39.00" CurrencyCode="EUR"/>
@@ -260,9 +260,7 @@ This endpoint posts a new reservation creation, modification or cancellation to 
 
 Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a `<HotelReservation>` block, and must be gathered under the same transactional status.
 
-### Fields we consider
-
-|  |  |
+| Fields we consider |  |
 | --- | --- |
 | `OTA_ResNotifRQ`<br>`ResStatus` | Transactional status of the reservation. It can be:<br>- 'Commit' (creates a new reservation)<br>- 'Modify' (updates an existing reservation)<br>- 'Cancel' (cancels a reservation) |
 | `<HotelReservation>` | Reservation block. We accept up to 1000 blocks. |
@@ -278,6 +276,7 @@ Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a singl
 | `RoomTypeCode` | Room type. It must match the `InvTypeCode` in inventory messages. |
 | `RatePlanCode` | Rate plan used for this reservation |
 | `NumberOfUnits` | Number of rooms under the same roomtype and rate plan. |
+| `InvBlockCode` | If the room booked is part of a block, the block ID is transferred in this field. |
 | `Rate` | One `<Rate>` block is for one amount for the given rate plan and room type for a given period.<aside class="notice">If the rate plan implies 2 different prices for two different days, there will be at least 2 `<Rate>` blocks.</aside> |
 | `EffectiveDate`<br>`ExpireDate` | Dates to define the time range of the `<Rate>`. We consider that one rate is applied for one night. <aside class="warning">The <code>ExpireDate</code> should not be the same as <code>EffectiveDate</code> The reservation would be considered a day-stay and would not be counted in occupancy.</aside> |
 | `AmountAfterTax`<br>`CurrencyCode` | Amount for the given rate plan, room type, time period, and its currency (in <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>). |
