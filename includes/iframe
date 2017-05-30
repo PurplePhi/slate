@@ -1,1 +1,247 @@
-<h1 id="iframe">iframe</h1>
+<h1 id="iframe">IFrame</h1>
+
+<h3 id="single-sign-on">Single sign-on</h3>
+
+<p>IFrame allows the RateIntelligence and RateManager tools to be accessed directly inside your PMS interface. This section will cover how to implement single sign-on for the RateManager IFrame with code samples.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>RateManager will provide you with a “partner id”, private encryption, and HMAC keys. In order for the IFrame to display, an encrypted token must be generated and passed to the URL so that RateManager can properly authenticate the user. This token is built from a JSON object containing the property’s Booking.com Hotel ID and the current timestamp in iso8601 format. If the Hotel ID doesn&rsquo;t match to a known property, or the timestamp is older than 10 minutes, the token will be rejected.</p>
+
+<p>The encryption token is constructed as follows:</p>
+
+<ol>
+<li>Generate a 16 byte random initialization vector (this has the same value in all code samples)</li>
+<li>Encrypt the JSON payload with AES 128 bit encryption, with the secret encryption key and initialization vector</li>
+<li>Prepend the randomly generated initialization vector to the encryption created, to get the ciphertext</li>
+<li>Compute the HMAC-SHA1 digest of that ciphertext using your secret HMAC key,</li>
+<li>Append that digest at the end of the ciphertext</li>
+<li>Finally, encode that result in base 64 to create the token</li>
+</ol>
+
+<p>Once this token is created, let&rsquo;s say <code class="prettyprint">abc123</code>, if your partner_id is <code class="prettyprint">456</code>, the url to display the IFrame will be </p>
+
+<p><code class="prettyprint">https://bookingsuite.revenue-management.travel/partner/iframe?partner_id=456&amp;token=abc123</code></p>
+
+<h3 id="example">Example</h3>
+
+<blockquote>
+<p>Ruby:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'openssl'</span>
+<span class="nb">require</span> <span class="s1">'base64'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+<span class="nb">require</span> <span class="s1">'securerandom'</span>
+
+<span class="n">payload</span> <span class="o">=</span> <span class="s1">'{"hotel_id": 42, "timestamp": "2016-06-09T11:36:26Z"}'</span>
+<span class="n">encryption_key</span> <span class="o">=</span> <span class="s1">'0011223344556677'</span>
+<span class="n">hmac_key</span> <span class="o">=</span> <span class="s1">'0123456789abcdef0123456789abcdef'</span>
+<span class="c1"># iv = SecureRandom.hex(8)</span>
+<span class="n">iv</span> <span class="o">=</span> <span class="s1">'zyxwvutsrqponmlk'</span> <span class="c1"># This line is for demonstration purpose to have a deterministic output</span>
+<span class="n">cipher</span> <span class="o">=</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">Cipher</span><span class="o">::</span><span class="no">AES</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="s1">'CBC'</span><span class="p">)</span>
+<span class="n">cipher</span><span class="p">.</span><span class="nf">encrypt</span>
+<span class="n">cipher</span><span class="p">.</span><span class="nf">key</span> <span class="o">=</span> <span class="n">encryption_key</span>
+<span class="n">cipher</span><span class="p">.</span><span class="nf">iv</span> <span class="o">=</span> <span class="n">iv</span>
+<span class="n">encrypted</span> <span class="o">=</span> <span class="p">(</span><span class="n">cipher</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span> <span class="o">+</span> <span class="n">cipher</span><span class="p">.</span><span class="nf">final</span><span class="p">)</span>
+<span class="n">ciphertext</span> <span class="o">=</span> <span class="n">iv</span> <span class="o">+</span> <span class="n">encrypted</span>
+<span class="n">digest</span> <span class="o">=</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">HMAC</span><span class="p">.</span><span class="nf">digest</span><span class="p">(</span><span class="s1">'SHA1'</span><span class="p">,</span> <span class="n">hmac_key</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
+<span class="n">base</span> <span class="o">=</span> <span class="no">Base64</span><span class="p">.</span><span class="nf">strict_encode64</span><span class="p">(</span><span class="n">ciphertext</span> <span class="o">+</span> <span class="n">digest</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">base</span>
+</code></pre>
+<blockquote>
+<p>PHP (This requires the mcrypt PHP extension):</p>
+</blockquote>
+<pre class="highlight plaintext"><code>function pkcs5_pad ($text, $blocksize) {
+  $pad = $blocksize - (strlen($text) % $blocksize);
+  return $text . str_repeat(chr($pad), $pad);
+}
+
+$payload = '{"hotel_id": 42, "timestamp": "2016-06-09T11:36:26Z"}';
+$encryption_key = '0011223344556677';
+$hmac_key = '0123456789abcdef0123456789abcdef';
+$iv = 'zyxwvutsrqponmlk';
+$length = strlen($payload);
+$size = mcrypt_get_block_size(MCRYPT_RIJNDAEL_128, 'ecb');
+$payload = pkcs5_pad($payload, $size);
+$cipher = mcrypt_module_open(MCRYPT_RIJNDAEL_128,'','cbc','');
+mcrypt_generic_init($cipher, $encryption_key, $iv);
+$encrypted = mcrypt_generic($cipher, $payload);
+mcrypt_generic_deinit($cipher);
+$ciphertext = $iv . $encrypted;
+$digest = hash_hmac("sha1", $ciphertext, $hmac_key, true);
+$base = base64_encode($ciphertext . $digest);
+echo $base;
+</code></pre>
+<blockquote>
+<p>Java 7:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.Cipher</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.Mac</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.SecretKey</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.spec.IvParameterSpec</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.spec.SecretKeySpec</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.bind.DatatypeConverter</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Enc</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">payload</span> <span class="o">=</span> <span class="s">"{\"hotel_id\": 42, \"timestamp\": \"2016-06-09T11:36:26Z\"}"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">encryption_key</span> <span class="o">=</span> <span class="s">"0011223344556677"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">hmac_key</span> <span class="o">=</span> <span class="s">"0123456789abcdef0123456789abcdef"</span><span class="o">;</span>
+
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">iv</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">16</span><span class="o">];</span>
+    <span class="n">Random</span> <span class="n">rnd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
+    <span class="n">rnd</span><span class="o">.</span><span class="na">nextBytes</span><span class="o">(</span><span class="n">iv</span><span class="o">);</span>
+    <span class="n">iv</span> <span class="o">=</span> <span class="s">"zyxwvutsrqponmlk"</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span> <span class="c1">// This line is for demonstration purpose to have a deterministic output</span>
+
+    <span class="n">SecretKeySpec</span> <span class="n">key</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SecretKeySpec</span><span class="o">(</span><span class="n">encryption_key</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span> <span class="s">"AES"</span><span class="o">);</span>
+    <span class="n">IvParameterSpec</span> <span class="n">ips</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IvParameterSpec</span><span class="o">(</span><span class="n">iv</span><span class="o">);</span>
+
+    <span class="n">Cipher</span> <span class="n">cipher</span> <span class="o">=</span> <span class="n">Cipher</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="s">"AES/CBC/PKCS5Padding"</span><span class="o">);;</span>
+    <span class="n">cipher</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">Cipher</span><span class="o">.</span><span class="na">ENCRYPT_MODE</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">ips</span><span class="o">);</span>
+
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">encrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="na">doFinal</span><span class="o">(</span><span class="n">payload</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">concat</span><span class="o">(</span><span class="n">iv</span><span class="o">,</span> <span class="n">encrypted</span><span class="o">);</span>
+
+    <span class="n">SecretKeySpec</span> <span class="n">signingKey</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SecretKeySpec</span><span class="o">(</span><span class="n">hmac_key</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span> <span class="s">"HmacSHA1"</span><span class="o">);</span>
+    <span class="n">Mac</span> <span class="n">mac</span> <span class="o">=</span> <span class="n">Mac</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="s">"HmacSHA1"</span><span class="o">);</span>
+    <span class="n">mac</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">signingKey</span><span class="o">);</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">rawHmac</span> <span class="o">=</span> <span class="n">mac</span><span class="o">.</span><span class="na">doFinal</span><span class="o">(</span><span class="n">ciphertext</span><span class="o">);</span>
+
+    <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">DatatypeConverter</span><span class="o">.</span><span class="na">printBase64Binary</span><span class="o">(</span><span class="n">concat</span><span class="o">(</span><span class="n">ciphertext</span><span class="o">,</span> <span class="n">rawHmac</span><span class="o">));</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">concat</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">c</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="o">}</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">c</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">]</span> <span class="o">=</span> <span class="n">b</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">c</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>C#:</p>
+</blockquote>
+<pre class="highlight csharp"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Security.Cryptography</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">EncodeExample</span>
+<span class="p">{</span>
+  <span class="k">const</span> <span class="kt">string</span> <span class="n">payload</span> <span class="p">=</span> <span class="s">"{\"hotel_id\": 42, \"timestamp\": \"2016-06-09T11:36:26Z\"}"</span><span class="p">;</span>
+  <span class="k">const</span> <span class="kt">string</span> <span class="n">encryption_key</span> <span class="p">=</span> <span class="s">"0011223344556677"</span><span class="p">;</span>
+  <span class="k">const</span> <span class="kt">string</span> <span class="n">hmac_key</span> <span class="p">=</span> <span class="s">"0123456789abcdef0123456789abcdef"</span><span class="p">;</span>
+
+  <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">iv</span> <span class="p">=</span> <span class="nf">InitVector</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">ciphertext</span> <span class="p">=</span> <span class="nf">Encrypt</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">iv</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">signed</span> <span class="p">=</span> <span class="nf">Sign</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">hmac_key</span><span class="p">));</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="nf">ToBase64String</span><span class="p">(</span><span class="n">signed</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">private</span> <span class="k">static</span> <span class="n">Byte</span><span class="p">[]</span> <span class="nf">InitVector</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">iv</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Byte</span><span class="p">[</span><span class="m">16</span><span class="p">];</span>
+    <span class="c1">// Random rnd = new Random();</span>
+    <span class="c1">// rnd.NextBytes(iv);</span>
+    <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="s">"zyxwvutsrqponmlk"</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">16</span><span class="p">,</span> <span class="n">iv</span><span class="p">,</span> <span class="n">iv</span><span class="p">.</span><span class="nf">GetLowerBound</span><span class="p">(</span><span class="m">0</span><span class="p">));</span> <span class="c1">// This line is for demonstration purpose to have a deterministic output</span>
+    <span class="k">return</span> <span class="n">iv</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">private</span> <span class="k">static</span> <span class="n">Byte</span><span class="p">[]</span> <span class="nf">Encrypt</span><span class="p">(</span><span class="kt">string</span> <span class="n">clearText</span><span class="p">,</span> <span class="n">Byte</span><span class="p">[]</span> <span class="n">iv</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">clearBytes</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">clearText</span><span class="p">);</span>
+
+    <span class="n">Byte</span><span class="p">[]</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">Aes</span> <span class="n">encryptor</span> <span class="p">=</span> <span class="n">Aes</span><span class="p">.</span><span class="nf">Create</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">encryptor</span><span class="p">.</span><span class="n">Key</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">encryption_key</span><span class="p">);</span>
+      <span class="n">encryptor</span><span class="p">.</span><span class="n">IV</span> <span class="p">=</span> <span class="n">iv</span><span class="p">;</span>
+      <span class="k">using</span> <span class="p">(</span><span class="n">MemoryStream</span> <span class="n">ms</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MemoryStream</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="n">CryptoStream</span> <span class="n">cs</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">CryptoStream</span><span class="p">(</span><span class="n">ms</span><span class="p">,</span> <span class="n">encryptor</span><span class="p">.</span><span class="nf">CreateEncryptor</span><span class="p">(),</span> <span class="n">CryptoStreamMode</span><span class="p">.</span><span class="n">Write</span><span class="p">))</span>
+        <span class="p">{</span>
+          <span class="n">cs</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">clearBytes</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">clearBytes</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+          <span class="n">cs</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="kt">var</span> <span class="n">encrypted</span> <span class="p">=</span> <span class="n">ms</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">();</span>
+        <span class="n">ret</span> <span class="p">=</span> <span class="nf">concat</span><span class="p">(</span><span class="n">iv</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">private</span> <span class="k">static</span> <span class="n">Byte</span><span class="p">[]</span> <span class="nf">Sign</span><span class="p">(</span><span class="n">Byte</span><span class="p">[]</span> <span class="n">input</span><span class="p">,</span> <span class="n">Byte</span><span class="p">[]</span> <span class="n">key</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Byte</span><span class="p">[]</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">hmac</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">HMACSHA1</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">digest</span> <span class="p">=</span> <span class="n">hmac</span><span class="p">.</span><span class="nf">ComputeHash</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+      <span class="n">ret</span> <span class="p">=</span> <span class="nf">concat</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">digest</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">private</span> <span class="k">static</span> <span class="n">Byte</span><span class="p">[]</span> <span class="nf">concat</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span> <span class="n">a</span><span class="p">,</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">b</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Byte</span><span class="p">[]</span> <span class="n">ret</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Byte</span><span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="n">Length</span> <span class="p">+</span> <span class="n">b</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
+    <span class="n">a</span><span class="p">.</span><span class="nf">CopyTo</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+    <span class="n">b</span><span class="p">.</span><span class="nf">CopyTo</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>All code samples are buildt on the same example, with the following values (all are strings):</p>
+
+<ul>
+<li>Initialization vector: <code class="prettyprint">zyxwvutsrqponmlk</code></li>
+<li>Encryption key: <code class="prettyprint">0011223344556677</code></li>
+<li>Hmac key: <code class="prettyprint">0123456789abcdef0123456789abcdef</code></li>
+<li>JSON payload: <code class="prettyprint">{&quot;hotel_id&quot;: 42, &quot;timestamp&quot;: &quot;2016-06-09T11:36:26Z&quot;}</code></li>
+</ul>
+
+<p>Here are the base 64 encoded values you should expect at each step:</p>
+
+<ul>
+<li>Initialization vector:</li>
+</ul>
+
+<p><code class="prettyprint">enl4d3Z1dHNycXBvbm1saw==</code></p>
+
+<ul>
+<li>Encrypted payload:</li>
+</ul>
+
+<p><code class="prettyprint">c/rNU6iD921arVhv/CFeHVYp7Hfc8743G6ej3nlHSkBFMDHxVcAKUahw9lX5/Z+YtpKq6FHX+81CLFKS7aUjPQ==</code></p>
+
+<ul>
+<li>Ciphertext:</li>
+</ul>
+
+<p><code class="prettyprint">enl4d3Z1dHNycXBvbm1sa3P6zVOog/dtWq1Yb/whXh1WKex33PO+Nxuno955R0pARTAx8VXAClGocPZV+f2fmLaSquhR1/vNQixSku2lIz0=</code></p>
+
+<ul>
+<li>Digest:</li>
+</ul>
+
+<p><code class="prettyprint">796ZQVecO+b6Gw8Sra5rFvg6uf4</code></p>
+
+<ul>
+<li>Final token:</li>
+</ul>
+
+<p><code class="prettyprint">enl4d3Z1dHNycXBvbm1sa3P6zVOog/dtWq1Yb/whXh1WKex33PO+Nxuno955R0pARTAx8VXAClGocPZV+f2fmLaSquhR1/vNQixSku2lIz3v3plBV5w75vobDxKtrmsW+Dq5/g==</code></p>
+
+<h3 id="testing">Testing</h3>
+
+<p>You can test the IFrame implementation using your secret keys and adding a /demo in the url: </p>
+
+<p><code class="prettyprint">https://bookingsuite.revenue-management.travel/partner/iframe/demo?partner_id=456&amp;token=abc123</code></p>
+
+<p>This will redirect you to an anonymised demo account. Note that you will still need a valid Hotel ID, partner_id, and the current timestamp, in addition to URL encoding the token before passing it.</p>
