@@ -30,7 +30,7 @@
           <span class="nt">&lt;RoomStays&gt;</span>
             <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomRates&gt;</span>
-                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span> <span class="na">InvBlockCode=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
                     <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
@@ -76,7 +76,7 @@
           <span class="nt">&lt;RoomStays&gt;</span>
             <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Corp"</span> <span class="na">SourceOfBusiness=</span><span class="s">"Special Company"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomRates&gt;</span>
-                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"Deluxe"</span> <span class="na">InvBlockCode=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"CORP"</span> <span class="na">RoomTypeCode=</span><span class="s">"Deluxe"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
                     <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"55.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
@@ -145,7 +145,7 @@
           <span class="nt">&lt;RoomStays&gt;</span>
             <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomRates&gt;</span>
-                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span> <span class="na">InvBlockCode=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
                     <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
@@ -211,7 +211,7 @@
           <span class="nt">&lt;RoomStays&gt;</span>
             <span class="nt">&lt;RoomStay</span> <span class="na">MarketCode=</span><span class="s">"Leisure"</span> <span class="na">SourceOfBusiness=</span><span class="s">"BOOKING.COM"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;RoomRates&gt;</span>
-                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span> <span class="na">InvBlockCode=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;RoomRate</span> <span class="na">NumberOfUnits=</span><span class="s">"1"</span> <span class="na">RatePlanCode=</span><span class="s">"BAR"</span> <span class="na">RoomTypeCode=</span><span class="s">"King"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;Rates&gt;</span>
                     <span class="nt">&lt;Rate</span> <span class="na">EffectiveDate=</span><span class="s">"2017-05-01"</span> <span class="na">ExpireDate=</span><span class="s">"2017-05-02"</span> <span class="na">RateTimeUnit=</span><span class="s">"Night"</span> <span class="na">UnitMultiplier=</span><span class="s">"1"</span><span class="nt">&gt;</span>
                       <span class="nt">&lt;Base</span> <span class="na">AmountAfterTax=</span><span class="s">"39.00"</span> <span class="na">CurrencyCode=</span><span class="s">"EUR"</span><span class="nt">/&gt;</span>
@@ -251,9 +251,11 @@
 
 <p>Each OTA_HotelResNotifRQ message can contain up to 1000 reservations for a single hotel. These reservations are in a <code class="prettyprint">&lt;HotelReservation&gt;</code> block, and must be gathered under the same transactional status.</p>
 
+<h3 id="fields-we-consider">Fields we consider</h3>
+
 <table><thead>
 <tr>
-<th>Fields we consider</th>
+<th></th>
 <th></th>
 </tr>
 </thead><tbody>
@@ -312,10 +314,6 @@
 <tr>
 <td><code class="prettyprint">NumberOfUnits</code></td>
 <td>Number of rooms under the same roomtype and rate plan.</td>
-</tr>
-<tr>
-<td><code class="prettyprint">InvBlockCode</code></td>
-<td>If the room booked is part of a block, the block ID is transferred in this field.</td>
 </tr>
 <tr>
 <td><code class="prettyprint">Rate</code></td>

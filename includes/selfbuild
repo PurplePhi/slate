@@ -1,5 +1,7 @@
 <h2 id="self-build">Self Build</h2>
 
+<p>The entire process of signup and activation of the RateManager product can be automated. This will allow the hotel partner to sign up for RateManager product from within their Booking.com extranet, and activate the connection to the PMS/channel manager provider with a click of a button.</p>
+
 <h3 id="full-automation-workflow">Full automation workflow</h3>
 
 <p><img src="/images/fullautomation.PNG" alt="selfbuild" /></p>
@@ -110,7 +112,12 @@ BookingSuite will send a 304 with a unique token and the Booking.com hotel ID.</
 <p>GET https://[provider_url.com]?hotel_code=123&amp;username=me&amp;password=hi</p>
 </blockquote>
 
-<p>Ask the PMS to send data again (start from scratch: history + in house + future)
-PMS needs to provide us with an endpoint we can call
-The only response expected is 200
-PMS will use the usual endpoint to post data</p>
+<p>If an issue is found that causes data discrepancies, the original data upload needs to be a repeatable automated process.
+You need to provide us with an endpoint to call for the re-synchronization.
+Authentication should be handled within the URL and the credentials need to be the same as the ones used in other messages.</p>
+
+<aside class="notice"> The only response to this should be <code>200 OK</code>.</aside>
+
+<p>You should then trigger the initial data upload again (historical, in-house and future reservations, full inventory and group blocks). This must be posted to the usual endpoint (https://api.pricematch.travel/htng_message)</p>
+
+<p>The ongoing real-time updates to reservations and inventory should not be disrupted during this process.</p>
